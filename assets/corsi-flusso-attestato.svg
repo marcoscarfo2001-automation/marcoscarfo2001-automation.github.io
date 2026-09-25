@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620">
+<style>
+.t{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;font-weight:600;fill:#ece8df;text-anchor:middle;dominant-baseline:central;letter-spacing:.02em}
+.s{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;fill:#9a958a;text-anchor:middle;dominant-baseline:central}
+.eb{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;letter-spacing:.2em;fill:#ff6b3d}
+.cap{font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;fill:#9a958a}
+.lane{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.16em;fill:#9a958a}
+.lbl{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;dominant-baseline:central}
+.w{fill:none;stroke:rgba(236,232,223,.42);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+.w.d{stroke:#ff6b3d;stroke-opacity:.75;stroke-dasharray:5 5}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#ece8df" fill-opacity=".8"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#ff6b3d"/></marker>
+<radialGradient id="glow" cx="100%" cy="0%" r="80%"><stop offset="0" stop-color="#ff6b3d" stop-opacity=".16"/><stop offset="1" stop-color="#ff6b3d" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="620" fill="#161513"/>
+<rect width="900" height="620" fill="url(#glow)"/>
+<text class="eb" x="60" y="58">RAMO ATTESTATI</text>
+<text class="cap" x="60" y="86">Dal controllo periodico alla trasmissione</text>
+<path class="w" d="M300,182.0 L300,218.0" marker-end="url(#a)"/>
+<path class="w" d="M450.0,250 L530.0,250" marker-end="url(#a)"/>
+<path class="w" d="M300,282.0 L300,318.0" marker-end="url(#a)"/>
+<path class="w" d="M300,382.0 L300,418.0" marker-end="url(#a)"/>
+<path class="w" d="M300,482.0 L300,518.0" marker-end="url(#a)"/>
+<path class="w d" d="M450.0,350 L638.0,350.0 Q650,350 650.0,362.0 L650,418.0" marker-end="url(#ad)"/>
+<path class="w d" d="M450.0,450 L530.0,450" marker-end="url(#ad)"/>
+<rect x="150.0" y="118.0" width="300" height="64" rx="14" fill="#201f1c" stroke="rgba(236,232,223,.20)" stroke-width="1.3"/>
+<circle cx="166.0" cy="134.0" r="4" fill="#ff6b3d"/>
+<text class="t" x="300" y="141">OGNI 23 ORE</text>
+<text class="s" x="300" y="161">cerca i corsi conclusi</text>
+<rect x="150.0" y="218.0" width="300" height="64" rx="14" fill="#201f1c" stroke="rgba(236,232,223,.20)" stroke-width="1.3"/>
+<path d="M166.0,228.5 L171.5,234.0 L166.0,239.5 L160.5,234.0 Z" fill="none" stroke="#ff6b3d" stroke-width="1.5"/>
+<text class="t" x="300" y="241">GIÀ NEL REGISTRO?</text>
+<text class="s" x="300" y="261">una riga per iscrizione</text>
+<rect x="530.0" y="218.0" width="240" height="64" rx="14" fill="none" stroke="rgba(236,232,223,.20)" stroke-width="1.3" stroke-dasharray="4 5"/>
+<text class="t" x="650" y="241" fill="#9a958a">SALTATO</text>
+<text class="s" x="650" y="261">già emesso o in corso</text>
+<rect x="150.0" y="318.0" width="300" height="64" rx="14" fill="#201f1c" stroke="rgba(236,232,223,.20)" stroke-width="1.3"/>
+<text class="t" x="300" y="341">EMETTE L'ATTESTATO</text>
+<text class="s" x="300" y="361">attende che il PDF sia pronto</text>
+<rect x="150.0" y="418.0" width="300" height="64" rx="14" fill="#201f1c" stroke="rgba(236,232,223,.20)" stroke-width="1.3"/>
+<text class="t" x="300" y="441">TRASMETTE</text>
+<text class="s" x="300" y="461">invio tramite la piattaforma</text>
+<rect x="150.0" y="518.0" width="300" height="64" rx="14" fill="#201f1c" stroke="#ff6b3d" stroke-width="1.6"/>
+<g fill="none" stroke="#ff6b3d" stroke-width="1.2"><rect x="420.0" y="530.0" width="18" height="14" rx="2"/><path d="M420.0 537.0H438.0M429.0 530.0V544.0"/></g>
+<text class="t" x="300" y="541">REGISTRO ATTESTATI</text>
+<text class="s" x="300" y="561">stato: trasmesso</text>
+<rect x="530.0" y="418.0" width="240" height="64" rx="14" fill="#2a1810" stroke="rgba(255,107,61,.55)" stroke-width="1.3"/>
+<circle cx="548.0" cy="436.0" r="8" fill="none" stroke="#ff6b3d" stroke-width="1.5"/><path d="M548.0 432.0V437.0" stroke="#ff6b3d" stroke-width="1.6" stroke-linecap="round"/><circle cx="548.0" cy="440.0" r="1" fill="#ff6b3d"/>
+<text class="t" x="650" y="441">SEGNA ERRORE</text>
+<text class="s" x="650" y="461">e avvisa l'amministrazione</text>
+<rect x="476.3" y="220" width="27.4" height="20" rx="10" fill="#161513" stroke="rgba(236,232,223,.20)"/><text class="lbl" x="490.0" y="230" text-anchor="middle" fill="#ece8df">sì</text>
+<rect x="314.0" y="290.0" width="27.4" height="20" rx="10" fill="#161513" stroke="rgba(236,232,223,.20)"/><text class="lbl" x="321.0" y="300.0" text-anchor="start" fill="#ece8df">no</text>
+<rect x="462.9" y="320" width="54.2" height="20" rx="10" fill="#161513" stroke="rgba(236,232,223,.20)"/><text class="lbl" x="490.0" y="330" text-anchor="middle" fill="#ff6b3d">errore</text>
+<rect x="462.9" y="420" width="54.2" height="20" rx="10" fill="#161513" stroke="rgba(236,232,223,.20)"/><text class="lbl" x="490.0" y="430" text-anchor="middle" fill="#ff6b3d">errore</text>
+</svg>
