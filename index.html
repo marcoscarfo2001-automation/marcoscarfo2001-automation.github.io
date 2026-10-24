@@ -15,10 +15,10 @@
   <meta property="og:image:height" content="627">
   <meta property="og:image:alt" content="Dall'idea su carta al sistema che funziona: il portfolio di Marco Scarfò">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -47,7 +47,7 @@
         </h1>
         <p class="lede reveal">
           Progetto e sviluppo software, automazioni e soluzioni con l'intelligenza artificiale.
-          Prima di scrivere codice cerco di capire bene il problema; poi spiego le scelte in modo semplice
+          Prima di scrivere codice cerco di capire bene il problema. Poi spiego le scelte in modo semplice
           a chi userà il risultato e seguo ogni passaggio, dal primo schema al rilascio.
         </p>
         <div class="hero-cta reveal">
@@ -92,12 +92,7 @@
 <g class="hv-panel" transform="rotate(2.5 423.0 364.0)">
 <rect x="262" y="214" width="322" height="300" rx="18" fill="#161513" filter="url(#hv-shadow-dark)"/>
 <rect x="262.5" y="214.5" width="321" height="299" rx="17.5" fill="none" stroke="rgba(236,232,223,.1)"/>
-<circle cx="284" cy="238" r="4" fill="#ff6b3d"/>
-<circle cx="298" cy="238" r="4" fill="#3a3834"/>
-<circle cx="312" cy="238" r="4" fill="#3a3834"/>
-<text x="334" y="239" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11" letter-spacing="1.2" fill="#9a958a">PIPELINE</text>
-<circle class="hv-live" cx="532" cy="238" r="3.5" fill="#7fd1a8"/>
-<text x="562" y="239" text-anchor="end" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#7fd1a8">live</text>
+<text x="286" y="239" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11" letter-spacing="1.2" fill="#9a958a">PIPELINE</text>
 <line x1="262" y1="262" x2="584" y2="262" stroke="rgba(236,232,223,.08)"/>
 <line x1="296" y1="292" x2="296" y2="476" stroke="rgba(236,232,223,.16)" stroke-width="1.5"/>
 <circle class="hv-node" style="--d:0" cx="296" cy="292" r="6.5" fill="#161513" stroke="rgba(236,232,223,.55)" stroke-width="1.5"/>
@@ -217,7 +212,7 @@
           <li class="reveal">
             <span class="mono-label">02 · Machine learning</span>
             <h3>F1 da <b>0.48</b> a <b>0.64</b></h3>
-            <p>L'F1 misura, da 0 a 1, quanto spesso il modello indovina la classe di rischio. Le policy usano tutte lo stesso linguaggio rassicurante, quindi le sole parole si fermano a 0.48; insegnando al modello i dieci criteri si sale a 0.64. Con i punteggi dati a mano si arriverebbe a 0.95.</p>
+            <p>L'F1 misura, da 0 a 1, quanto spesso il modello indovina la classe di rischio. Le policy usano tutte lo stesso linguaggio rassicurante, quindi le sole parole si fermano a 0.48. Insegnando al modello i dieci criteri si sale a 0.64. Con i punteggi dati a mano si arriverebbe a 0.95.</p>
           </li>
           <li class="reveal">
             <span class="mono-label">03 · Il prototipo RAG</span>
@@ -367,6 +362,6 @@
     <button class="lb-btn lb-next" data-lb="1" aria-label="Immagine successiva">→</button>
   </dialog>
 
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>

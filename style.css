@@ -21,6 +21,11 @@
   --ease: cubic-bezier(.2, .8, .2, 1);
 }
 
+/* ---------- Font (nel sito, non da Google Fonts) ---------- */
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/instrument-serif-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+
 /* ---------- Base ---------- */
 [hidden] { display: none !important; }
 *, *::before, *::after { box-sizing: border-box; }
@@ -58,8 +63,7 @@ button { font: inherit; }
   position: sticky; top: 0; z-index: 50;
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px var(--gutter);
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: blur(10px);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 .brand { font-family: var(--serif); font-size: 24px; text-decoration: none; }
@@ -88,7 +92,7 @@ button { font: inherit; }
 
 /* il foglio con lo schema e il flusso che gira */
 .hero-visual { width: clamp(340px, 36vw, 540px); height: auto; overflow: visible; }
-.hv-packet { animation: hv-run 5s linear infinite; filter: drop-shadow(0 0 6px rgba(255, 107, 61, .9)); }
+.hv-packet { animation: hv-run 5s linear infinite; }
 @keyframes hv-run {
   0% { transform: translateY(0); opacity: 0; }
   4% { opacity: 1; }
@@ -100,8 +104,6 @@ button { font: inherit; }
   0%, 14% { fill: #ff6b3d; stroke: #ff6b3d; }
   28%, 100% { fill: #161513; stroke: rgba(236, 232, 223, .55); }
 }
-.hv-live { animation: hv-pulse 1.6s ease-in-out infinite; }
-@keyframes hv-pulse { 50% { opacity: .25; } }
 
 /* ---------- Strumenti ---------- */
 .tools {
@@ -131,10 +133,6 @@ button { font: inherit; }
   background: var(--night); color: var(--night-ink);
   padding: clamp(72px, 10vw, 140px) var(--gutter);
   position: relative; overflow: hidden;
-}
-.feature::before {
-  content: ""; position: absolute; width: 60vw; height: 60vw; right: -20vw; top: -25vw; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 107, 61, .22), transparent 65%); pointer-events: none;
 }
 .feature > * { position: relative; max-width: 1400px; margin-left: auto; margin-right: auto; }
 .feature .eyebrow, .feature .mono-label { color: var(--night-muted); }
@@ -430,7 +428,7 @@ button { font: inherit; }
 .sheet .tot { margin-top: auto; border-top: 1px solid #cfc9bc; padding-top: 10px; display: flex; justify-content: space-between; font: 11px var(--sans); color: #161513; }
 .sheet .tot b { color: var(--accent); }
 @keyframes fill { 0% { transform: scaleX(0); } 35%, 100% { transform: scaleX(1); } }
-.ai-chip { position: absolute; right: 9%; top: 18%; font: 500 11px var(--sans); padding: 8px 12px; border-radius: 999px; background: var(--orange); color: #161513; box-shadow: 0 10px 30px -10px rgba(255,107,61,.8); }
+.ai-chip { position: absolute; right: 9%; top: 18%; font: 500 11px var(--sans); padding: 8px 12px; border-radius: 999px; background: var(--orange); color: #161513; }
 .pdf-chip { position: absolute; left: 9%; bottom: 16%; font: 500 11px var(--sans); padding: 8px 12px; border-radius: 999px; border: 1px solid var(--night-line); color: var(--night-ink); background: #2a2926; }
 .card:hover .sheet { transform: rotate(0) scale(1.03); }
 
@@ -545,7 +543,7 @@ button { font: inherit; }
   background: var(--surface); color: var(--ink); overflow: hidden;
 }
 .modal[open] { animation: pop .45s var(--ease); }
-.modal::backdrop { background: rgba(10, 10, 9, .6); backdrop-filter: blur(6px); }
+.modal::backdrop { background: rgba(10, 10, 9, .7); }
 @keyframes pop { from { opacity: 0; transform: translateY(24px) scale(.98); } }
 .modal-body { max-height: calc(100vh - 48px); overflow-y: auto; padding: clamp(24px, 5vw, 56px); }
 .modal-close {
