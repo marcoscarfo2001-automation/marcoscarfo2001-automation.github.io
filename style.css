@@ -260,8 +260,10 @@ button { font: inherit; }
 .card-body {
   display: flex; flex-direction: column; gap: 10px; flex: 1;
   margin-top: 10px; padding: 16px 14px 12px; background: var(--surface); border-radius: 5px;
+  container-type: inline-size;
 }
-.card-title { font-family: var(--serif); font-size: clamp(28px, 2.3vw, 34px); line-height: 1; }
+/* il titolo segue la larghezza della figurina, così il nome più lungo resta su una riga */
+.card-title { font-family: var(--serif); font-size: clamp(24px, calc((100cqi - 28px) / 7.9), 34px); line-height: 1; letter-spacing: -0.01em; }
 .card-hook {
   color: var(--muted); font-size: 14px; line-height: 1.5; min-height: 4.5em;
 }

@@ -38,7 +38,7 @@ const projects = [
     group: "lavoro",
     kind: "Automazione",
     year: "2026",
-    title: "Automazione E‑learning",
+    title: "Corsi online automatici",
     foot: "In azienda, 2026",
     hook: "Dal pagamento del corso online fino all'attestato, tutto avviene da solo, senza lavoro manuale.",
     cover: "flow",
