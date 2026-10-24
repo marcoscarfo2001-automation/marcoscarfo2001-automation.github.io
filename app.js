@@ -9,7 +9,7 @@ const projects = [
     kind: "Agente AI",
     year: "2026",
     title: "Agente Preventivi",
-    foot: "In azienda · 2026",
+    foot: "In azienda, 2026",
     hook: "Il tecnico manda un vocale su WhatsApp e riceve il preventivo in PDF, senza aprire il gestionale.",
     cover: "chat",
     tint: "#2346c8",
@@ -39,7 +39,7 @@ const projects = [
     kind: "Automazione",
     year: "2026",
     title: "Automazione E‑learning",
-    foot: "In azienda · 2026",
+    foot: "In azienda, 2026",
     hook: "Dal pagamento del corso online fino all'attestato, tutto avviene da solo, senza lavoro manuale.",
     cover: "flow",
     tint: "#4566e6",
@@ -67,8 +67,8 @@ const projects = [
     kind: "App per i tecnici",
     year: "2026",
     title: "Gestionale da campo",
-    foot: "In azienda · 2026",
-    hook: "L'app dei tecnici sul campo: timbrano con il GPS e fanno firmare al cliente il foglio di lavoro.",
+    foot: "In azienda, 2026",
+    hook: "L'app dei tecnici sul campo, per timbrare con il GPS e far firmare al cliente il foglio di lavoro.",
     cover: "screens",
     tint: "#b08d57",
     tags: ["React", "Express", "PostgreSQL", "PWA", "Replit Agent"],
@@ -103,7 +103,7 @@ const projects = [
     kind: "Automazione con AI",
     year: "2026",
     title: "Proforme automatiche",
-    foot: "In azienda · 2026",
+    foot: "In azienda, 2026",
     hook: "Crea da sola le proforme per i lavori da fatturare, con l'AI che legge i dati dalle offerte in PDF.",
     cover: "invoice",
     tint: "#1c3592",
@@ -130,7 +130,7 @@ const projects = [
     kind: "Tesi di laurea",
     year: "Università",
     title: "Dataware",
-    hook: "La mia tesi: legge le privacy policy, misura quanto sono rischiose e spiega ogni punteggio.",
+    hook: "Il sistema della mia tesi legge le privacy policy, ne misura il rischio e spiega ogni punteggio.",
     cover: "risk",
     tint: "#2346c8",
     rare: true,
@@ -198,7 +198,7 @@ const projects = [
     kind: "Design di un'app",
     year: "Università",
     title: "Gufy",
-    hook: "Un'app per dormire in treno: un gufo ti sveglia poco prima della tua fermata.",
+    hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
     cover: "gufy",
     tint: "#c9962c",
     tags: ["UX research", "Personas", "Storyboard", "Figma"],
@@ -230,7 +230,7 @@ const projects = [
     kind: "Database e analisi",
     year: "Università",
     title: "Streaming musicale",
-    hook: "Un piccolo Spotify fatto da zero: database, data warehouse e analisi di cosa si ascolta per età e mese.",
+    hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
     cover: "schema",
     tint: "#646a78",
     tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
@@ -262,7 +262,7 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 function observeReveal(root = document) {
   root.querySelectorAll(".reveal:not(.in)").forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 4) * 70}ms`;
+    if (el.closest(".hero")) el.style.transitionDelay = `${i * 90}ms`;
     io.observe(el);
   });
 }
@@ -271,16 +271,16 @@ function observeReveal(root = document) {
 // ---------- Dataware: estratto del dataset della tesi (10 piattaforme su 60) ----------
 const criteriaNames = ["Raccolta", "Condivisione", "Profilazione", "Conservazione", "Trasparenza", "Diritti", "Sicurezza", "Licenza", "Tutele", "Arbitrato"];
 const platforms = [
-  { name: "Threema", c: [1, 1, 1, 1, 1, 1, 1, 1, 2, 2], note: "Server propri in Svizzera, cifratura end-to-end, IP pseudonimizzati: il punteggio più basso del dataset." },
+  { name: "Threema", c: [1, 1, 1, 1, 1, 1, 1, 1, 2, 2], note: "Server propri in Svizzera, cifratura end-to-end, IP pseudonimizzati. È il punteggio più basso del dataset." },
   { name: "Revolut", c: [3, 2, 3, 2, 2, 1, 1, 2, 2, 1], note: "Diritti effettivi, sicurezza e tutele legali ai livelli migliori per un servizio finanziario." },
   { name: "Dropbox", c: [3, 3, 2, 2, 2, 2, 2, 1, 3, 3], note: "Licenza sui contenuti limitata al servizio. Pesano di più tutele contrattuali e arbitrato." },
   { name: "Google", c: [4, 4, 5, 2, 2, 1, 2, 3, 3, 1], note: "Profilazione al massimo, ma trasparenza, diritti esercitabili e sicurezza dichiarata abbassano la media." },
   { name: "Spotify", c: [3, 3, 3, 2, 2, 2, 3, 4, 3, 3], note: "Nessun criterio raggiunge gli estremi, ma il rischio è distribuito un po' ovunque e la licenza sui contenuti è il punto più alto." },
   { name: "Amazon", c: [4, 4, 4, 4, 2, 2, 2, 3, 3, 2], note: "Raccolta, condivisione, profilazione e conservazione sono tutte alte, come ci si aspetta da un ecosistema che vive di dati." },
   { name: "Shein", c: [4, 5, 4, 3, 2, 2, 2, 5, 4, 2], note: "Condivisione dei dati e licenza sui contenuti al massimo." },
-  { name: "TikTok", c: [5, 5, 5, 4, 3, 2, 3, 4, 4, 4], note: "Raccolta, condivisione e profilazione al massimo: una quantità molto ampia di dati personali." },
-  { name: "AliExpress", c: [5, 5, 4, 4, 2, 3, 2, 5, 4, 5], note: "Licenza sui contenuti e arbitrato al massimo: tutele legali molto sbilanciate verso la piattaforma." },
-  { name: "HolaVPN", c: [5, 5, 5, 5, 5, 4, 4, 3, 5, 5], note: "Cede banda e risorse del dispositivo a terzi e lo chiama «value exchange»: è dichiarato, ma l'utente difficilmente se ne rende conto." },
+  { name: "TikTok", c: [5, 5, 5, 4, 3, 2, 3, 4, 4, 4], note: "Raccolta, condivisione e profilazione al massimo, quindi una quantità molto ampia di dati personali." },
+  { name: "AliExpress", c: [5, 5, 4, 4, 2, 3, 2, 5, 4, 5], note: "Licenza sui contenuti e arbitrato al massimo, con tutele legali molto sbilanciate verso la piattaforma." },
+  { name: "HolaVPN", c: [5, 5, 5, 5, 5, 4, 4, 3, 5, 5], note: "Cede banda e risorse del dispositivo a terzi e lo chiama «value exchange». È dichiarato, ma l'utente difficilmente se ne rende conto." },
 ];
 const riskClass = (s) => s <= 18 ? "Minimal risk" : s <= 26 ? "Low risk" : s <= 34 ? "Moderate risk" : s <= 42 ? "Significant risk" : "Critical risk";
 
@@ -295,7 +295,7 @@ platformsEl.innerHTML = platforms.map((p) =>
 ).join("");
 
 criteriaEl.innerHTML =
-  `<p class="mono-label">Il dettaglio di <b id="crit-name"></b>, criterio per criterio</p>` +
+  `<p class="mono-label">Il dettaglio di <b id="crit-name">TikTok</b>, criterio per criterio</p>` +
   criteriaNames.map((k) => `<div class="crit"><span>${k}</span><i></i><b></b></div>`).join("");
 const critRows = [...criteriaEl.querySelectorAll(".crit")];
 
@@ -377,7 +377,7 @@ const covers = {
   risk: () => {
     const t = platforms.find((p) => p.name === "TikTok");
     return `<div class="cover cover-risk">
-      <span class="rk-label">TikTok · 10 criteri</span>
+      <span class="rk-label">TikTok, 10 criteri</span>
       <span class="rk-score">${t.c.reduce((a, b) => a + b, 0)}<small>/50</small></span>
       <span class="rk-class">${riskClass(t.c.reduce((a, b) => a + b, 0))}</span>
       <span class="rk-bars">${t.c.map((v, i) => `<i style="--v:${v};--d:${i}"></i>`).join("")}</span>
@@ -424,7 +424,7 @@ function cardHTML(p, i, inDeck) {
         <span class="card-title">${p.title}</span>
         <span class="card-hook">${p.hook}</span>
         <span class="card-stats">${p.stats.map(([v, l]) => `<span><small>${l}</small><i></i><b>${v}</b></span>`).join("")}</span>
-        <span class="card-foot"><span>${p.foot || p.year}</span><span class="card-open">Apri <span aria-hidden="true">→</span></span></span>
+        <span class="card-foot"><span>${p.foot || p.year}</span><span class="card-open">Apri</span></span>
       </span>
       <span class="card-shine" aria-hidden="true"></span>
     </span>
@@ -531,7 +531,7 @@ function layoutDeck() {
     c.classList.toggle("is-active", o === 0);
     c.tabIndex = o === 0 ? 0 : -1;
   });
-  deckCount.textContent = `${pad2(active + 1)} / ${pad2(cards.length)}`;
+  deckCount.textContent = `${active + 1} / ${cards.length}`;
 }
 function go(to) {
   const n = stage.children.length;
@@ -582,7 +582,7 @@ function openProject(id) {
   const p = projects.find((x) => x.id === id);
   body.style.setProperty("--tint", p.tint);
   body.innerHTML = `
-    <p class="m-meta"><span class="m-no">N° ${numberOf(p)}</span> ${p.kind} · ${p.year}</p>
+    <p class="m-meta"><span class="m-no">N° ${numberOf(p)}</span> ${p.kind}, ${p.year}</p>
     <h2 class="m-title" id="modal-title">${p.title}</h2>
     <p class="m-hook">${p.hook}</p>
     <div class="m-numbers">${p.numbers.map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("")}</div>
@@ -600,7 +600,7 @@ function openProject(id) {
       </div>
       <div class="m-side">
         <h3>Stack</h3>
-        <div class="tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
+        <p class="m-stack">${p.tags.join(", ")}</p>
         <h3>Il mio ruolo</h3>
         <p class="m-text">${p.role}</p>
       </div>

@@ -18,7 +18,7 @@
   <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -46,13 +46,13 @@
           <em>che funziona.</em>
         </h1>
         <p class="lede reveal">
-          Progetto e sviluppo software, automazioni e soluzioni con l'intelligenza artificiale.
-          Prima di scrivere codice cerco di capire bene il problema. Poi spiego le scelte in modo semplice
-          a chi userà il risultato e seguo ogni passaggio, dal primo schema al rilascio.
+          Progetto e sviluppo software, automazioni e soluzioni con l'intelligenza artificiale,
+          seguendo ogni passaggio dal primo schema al rilascio. Le scelte tecniche le spiego
+          in modo semplice a chi lavorerà con il sistema.
         </p>
         <div class="hero-cta reveal">
-          <a class="btn btn-solid" href="#progetti">Guarda i progetti <span aria-hidden="true">↓</span></a>
-          <a class="btn btn-ghost" href="#contatti">Scrivimi</a>
+          <a class="btn btn-solid" href="#progetti">Guarda i progetti</a>
+          <a class="text-link" href="#contatti">Scrivimi</a>
         </div>
       </div>
       <svg class="hero-visual reveal" viewBox="0 0 600 540" role="img" aria-label="Uno schema disegnato a penna su un foglio e, sopra, lo stesso flusso in esecuzione: input, LLM, knowledge base, validazione, output">
@@ -90,14 +90,14 @@
 <path d="M84,458 C110,462 140,459 168,462" fill="none" stroke="#2346c8" stroke-opacity=".6" stroke-width="1.6" stroke-linecap="round"/>
 </g>
 <g class="hv-panel" transform="rotate(2.5 423.0 364.0)">
-<rect x="262" y="214" width="322" height="300" rx="18" fill="#16181d" filter="url(#hv-shadow-dark)"/>
-<rect x="262.5" y="214.5" width="321" height="299" rx="17.5" fill="none" stroke="rgba(233,236,243,.1)"/>
+<rect x="262" y="214" width="322" height="300" rx="6" fill="#16181d" filter="url(#hv-shadow-dark)"/>
+<rect x="262.5" y="214.5" width="321" height="299" rx="5.5" fill="none" stroke="rgba(233,236,243,.1)"/>
 <text x="286" y="239" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11" letter-spacing="1.2" fill="#97a0b4">PIPELINE</text>
 <line x1="262" y1="262" x2="584" y2="262" stroke="rgba(233,236,243,.08)"/>
 <line x1="296" y1="292" x2="296" y2="476" stroke="rgba(233,236,243,.16)" stroke-width="1.5"/>
 <circle class="hv-node" style="--d:0" cx="296" cy="292" r="6.5" fill="#16181d" stroke="rgba(233,236,243,.55)" stroke-width="1.5"/>
 <text class="hv-t" x="318" y="285" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="14.5" font-weight="500" fill="#e9ecf3">Input</text>
-<text class="hv-s" x="318" y="302" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">voce · testo · documenti</text>
+<text class="hv-s" x="318" y="302" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">voce, testo, documenti</text>
 <circle class="hv-node" style="--d:1" cx="296" cy="338" r="6.5" fill="#16181d" stroke="rgba(233,236,243,.55)" stroke-width="1.5"/>
 <text class="hv-t" x="318" y="331" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="14.5" font-weight="500" fill="#e9ecf3">LLM</text>
 <text class="hv-s" x="318" y="348" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">capisce e struttura la richiesta</text>
@@ -109,9 +109,9 @@
 <text class="hv-s" x="318" y="440" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">regole e controllo umano</text>
 <circle class="hv-node" style="--d:4" cx="296" cy="476" r="6.5" fill="#16181d" stroke="rgba(233,236,243,.55)" stroke-width="1.5"/>
 <text class="hv-t" x="318" y="469" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="14.5" font-weight="500" fill="#e9ecf3">Output</text>
-<text class="hv-s" x="318" y="486" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">documento · email · API</text>
+<text class="hv-s" x="318" y="486" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11.5" fill="#97a0b4">documento, email, API</text>
 <circle class="hv-packet" cx="296" cy="292" r="4.5" fill="#7d97ff"/>
-<rect x="514" y="464" width="48" height="24" rx="12" fill="#7d97ff"/>
+<rect x="514" y="464" width="48" height="24" rx="3" fill="#7d97ff"/>
 <text x="538" y="477" text-anchor="middle" dominant-baseline="central" font-family="Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#16181d">PDF</text>
 </g>
 </svg>
@@ -119,19 +119,19 @@
 
     <!-- STRUMENTI -->
     <div class="tools">
-      <div class="tool reveal">
+      <div class="tool">
         <span class="mono-label">Intelligenza artificiale</span>
         <p><em>OpenAI</em> <em>Whisper</em> <em>RAG</em> <em>Machine Learning</em></p>
       </div>
-      <div class="tool reveal">
+      <div class="tool">
         <span class="mono-label">Automazione</span>
         <p><em>n8n</em> <em>Integrazioni API</em> <em>Webhook</em> <em>Agenti AI</em></p>
       </div>
-      <div class="tool reveal">
+      <div class="tool">
         <span class="mono-label">Sviluppo</span>
         <p><em>JavaScript</em> <em>Python</em> <em>PHP</em> <em>SQL</em></p>
       </div>
-      <div class="tool reveal">
+      <div class="tool">
         <span class="mono-label">Design</span>
         <p><em>Figma</em> <em>UX research</em> <em>Prototipazione</em></p>
       </div>
@@ -141,18 +141,18 @@
     <section id="profilo" class="about">
       <p class="about-big reveal">
         Un profilo ibrido, tra tecnologia e persone: mi interessano l'intelligenza artificiale,
-        i dati e <em>l'impatto che hanno su chi li usa.</em>
+        i dati e l'impatto che hanno su chi li usa.
       </p>
       <div class="about-cols">
-        <p class="reveal">
+        <p>
           <span class="mono-label">Formazione</span>
-          Laurea triennale in ICT: ho imparato a progettare sistemi informatici partendo
-          da chi li userà. Da qui è nata la tesi su Dataware.
+          Laurea triennale in ICT, dove ho imparato a progettare sistemi informatici
+          a partire dalle esigenze concrete. Da qui è nata la tesi su Dataware.
         </p>
-        <p class="reveal">
+        <p>
           <span class="mono-label">In azienda</span>
           Lavoro su processi reali, dall'app per i tecnici sul campo agli agenti AI collegati
-          ai software aziendali: parto da come si lavora oggi e cerco cosa si può semplificare.
+          ai software aziendali. Il punto di partenza è sempre come si lavora oggi, per capire cosa si può semplificare.
         </p>
       </div>
     </section>
@@ -162,7 +162,7 @@
       <div class="feature-head">
         <div>
           <p class="eyebrow reveal">Tesi di laurea</p>
-          <h2 class="reveal">Data<em>ware</em></h2>
+          <h2 class="reveal">Dataware</h2>
           <p class="feature-lede reveal">
             «Accetto i termini e le condizioni» è stata definita la bugia più grande di Internet.
             Dataware legge privacy policy e termini di servizio al posto tuo e ti spiega, criterio per criterio, cosa stai accettando.
@@ -173,9 +173,9 @@
 
       <div class="feature-grid">
         <!-- Scala del rischio interattiva -->
-        <div class="scale-card reveal">
-          <p class="mono-label">Prova: scegli una piattaforma</p>
-          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio): la somma dei dieci va da 10 a 50.</p>
+        <div class="scale-card">
+          <p class="mono-label">Scegli una piattaforma</p>
+          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio), quindi la somma dei dieci va da 10 a 50.</p>
           <div class="platforms" id="platforms" role="tablist" aria-label="Piattaforme"></div>
 
           <div class="scale-readout" aria-live="polite">
@@ -195,7 +195,7 @@
               <span style="--from:43;--to:50">Critical</span>
             </div>
             <div class="scale-marker" id="marker"></div>
-            <div class="scale-ticks"><span>10 · massima tutela</span><span>50 · massimo rischio</span></div>
+            <div class="scale-ticks"><span>10, massima tutela</span><span>50, massimo rischio</span></div>
           </div>
 
           <div class="criteria" id="criteria"></div>
@@ -203,31 +203,31 @@
 
         <!-- Il percorso -->
         <ol class="pipeline">
-          <li class="reveal">
-            <span class="mono-label">01 · Il dataset</span>
+          <li>
+            <span class="mono-label">Il dataset</span>
             <h3>Sessanta piattaforme lette a mano</h3>
             <p>Non esisteva una raccolta di privacy policy classificate per rischio, così l'ho creata io, valutando ogni piattaforma su dieci criteri tratti dal GDPR e dai termini di servizio.</p>
           </li>
-          <li class="reveal">
-            <span class="mono-label">02 · Machine learning</span>
+          <li>
+            <span class="mono-label">Machine learning</span>
             <h3>F1 da <b>0.48</b> a <b>0.64</b></h3>
             <p>L'F1 misura, da 0 a 1, quanto spesso il modello indovina la classe di rischio. Le policy usano tutte lo stesso linguaggio rassicurante, quindi le sole parole si fermano a 0.48. Insegnando al modello i dieci criteri si sale a 0.64. Con i punteggi dati a mano si arriverebbe a 0.95.</p>
           </li>
-          <li class="reveal">
-            <span class="mono-label">03 · Il prototipo RAG</span>
+          <li>
+            <span class="mono-label">Il prototipo RAG</span>
             <h3>Un'AI che ragiona sugli esempi</h3>
-            <p>Davanti a una policy nuova, il prototipo in n8n cerca le piattaforme già valutate più simili e, partendo da quelle, dà e motiva un punteggio per ogni criterio.</p>
+            <p>Davanti a una policy nuova, il prototipo in n8n cerca le piattaforme già valutate più simili e su quelle basa un punteggio motivato per ogni criterio.</p>
           </li>
-          <li class="reveal">
-            <span class="mono-label">04 · La validazione</span>
+          <li>
+            <span class="mono-label">La validazione</span>
             <h3><b>9</b> classi corrette su <b>10</b></h3>
             <p>Su dieci piattaforme mai viste prima, il sistema sbaglia in media di 1.7 punti rispetto alla mia valutazione, e ogni risultato si può controllare criterio per criterio.</p>
           </li>
         </ol>
       </div>
 
-      <div class="feature-actions reveal">
-        <button class="feature-open" data-open="dataware">Scopri il progetto completo</button>
+      <div class="feature-actions">
+        <button class="feature-open" data-open="dataware">Apri la scheda della tesi</button>
       </div>
     </section>
 
@@ -235,13 +235,13 @@
     <section id="progetti" class="collection">
       <div class="collection-head">
         <div>
-          <h2 class="reveal">La <em>collezione</em></h2>
-          <p class="collection-sub reveal">
-            Una figurina per ogni progetto: lavori in azienda, la tesi, i progetti universitari e quelli personali.
+          <h2 class="reveal">La collezione</h2>
+          <p class="collection-sub">
+            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
             Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
           </p>
         </div>
-        <div class="collection-controls reveal">
+        <div class="collection-controls">
           <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
             <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
             <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
@@ -275,51 +275,51 @@
 
     <!-- METODO -->
     <section id="metodo" class="method">
-      <h2 class="reveal">Il <em>metodo</em></h2>
+      <h2 class="reveal">Il metodo</h2>
       <div class="graph" id="graph">
       <svg class="graph-lines" aria-hidden="true"><path id="graph-path"/></svg>
       <!-- I testi si alternano sopra e sotto: la curva corre libera nella fascia centrale -->
       <ol class="steps">
         <li style="--c:1">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Ascolto</h3>
-            <p>Parto dalle persone che vivono il processo ogni giorno, per capire dove perdono tempo e cosa invece funziona già e va lasciato com'è.</p>
+            <p>Il primo passo sono le persone che vivono il processo ogni giorno, per capire dove perdono tempo e cosa invece funziona già e va lasciato com'è.</p>
           </div>
         </li>
         <li style="--c:2">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Dati ed etica</h3>
             <p>Prima di muovere un dato mi chiedo da dove arriva, chi potrà vederlo e quanto a lungo resterà.</p>
           </div>
         </li>
         <li style="--c:3">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Carta e lavagna</h3>
             <p>Sul foglio metto in fila chi è coinvolto, le eccezioni e i casi limite. Scelgo lo strumento solo quando il problema è chiaro.</p>
           </div>
         </li>
         <li style="--c:4">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Flusso</h3>
-            <p>Disegno il percorso dei dati per capire dove entrano, dove qualcosa può andare storto e cosa deve succedere in quel caso.</p>
+            <p>Il percorso dei dati diventa un disegno, per capire dove entrano, dove qualcosa può andare storto e cosa deve succedere in quel caso.</p>
           </div>
         </li>
         <li style="--c:5">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Costruzione</h3>
-            <p>Scrivo il codice e i workflow, e uso l'intelligenza artificiale dove porta un vantaggio reale, controllando sempre che i risultati siano corretti.</p>
+            <p>Codice e workflow arrivano solo a questo punto, con l'intelligenza artificiale dove porta un vantaggio reale e un controllo costante sui risultati.</p>
           </div>
         </li>
         <li style="--c:6">
           <span class="step-n" aria-hidden="true"></span>
-          <div class="step-text reveal">
+          <div class="step-text">
             <h3>Documentazione</h3>
-            <p>Scrivo la relazione tecnica e, quando serve, una guida d'uso, così chi arriva dopo può capire il sistema e mantenerlo.</p>
+            <p>Alla fine restano una relazione tecnica e, quando serve, una guida d'uso, così chi arriva dopo può capire il sistema e mantenerlo.</p>
           </div>
         </li>
       </ol>
@@ -328,18 +328,18 @@
 
     <!-- CONTATTI -->
     <section id="contatti" class="contact">
-      <h2 class="reveal">Hai un'idea o un processo<br><em>da semplificare?</em></h2>
-      <div class="contact-links reveal">
-        <a href="mailto:marcoscarfo2001@gmail.com">Email ↗</a>
-        <a href="https://www.linkedin.com/in/marco-scarfo-work/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://github.com/marcoscarfo2001-automation" target="_blank" rel="noopener">GitHub ↗</a>
+      <h2 class="reveal">Hai un'idea o un processo<br>da semplificare?</h2>
+      <div class="contact-links">
+        <a href="mailto:marcoscarfo2001@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/marco-scarfo-work/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/marcoscarfo2001-automation" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <span>© 2026 Marco Scarfò</span>
-    <a href="#top" class="to-top">Torna su ↑</a>
+    <a href="#top" class="to-top">Torna su</a>
   </footer>
 
   <!-- DETTAGLIO PROGETTO -->
@@ -359,6 +359,6 @@
     <button class="lb-btn lb-next" data-lb="1" aria-label="Immagine successiva">→</button>
   </dialog>
 
-  <script src="app.js?v=9"></script>
+  <script src="app.js?v=11"></script>
 </body>
 </html>
