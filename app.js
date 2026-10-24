@@ -546,20 +546,33 @@ stage.addEventListener("keydown", (e) => {
 });
 window.addEventListener("resize", layoutDeck);
 
-// Trascinamento (mouse e touch) e rotellina orizzontale
+// Trascinamento col mouse (scorre più carte), swipe col dito (una carta per gesto), rotellina orizzontale
 let drag = null, dragged = false;
 stage.addEventListener("pointerdown", (e) => {
-  drag = { x: e.clientX, start: active, w: stage.children[0]?.offsetWidth || 280 };
+  drag = { x: e.clientX, start: active, w: stage.children[0]?.offsetWidth || 280, touch: e.pointerType !== "mouse" };
   dragged = false;
 });
 window.addEventListener("pointermove", (e) => {
   if (!drag) return;
   const dx = e.clientX - drag.x;
   if (Math.abs(dx) > 6) dragged = true;
+  if (drag.touch) return;
   const to = drag.start - Math.round(dx / (drag.w * 0.45));
   if (to !== active) go(to);
 });
-window.addEventListener("pointerup", () => { drag = null; });
+window.addEventListener("pointerup", (e) => {
+  if (drag?.touch) {
+    const dx = e.clientX - drag.x;
+    if (Math.abs(dx) > 40) go(drag.start - Math.sign(dx));
+  }
+  drag = null;
+});
+window.addEventListener("pointercancel", () => { drag = null; });
+
+// L'avviso del mazzo usa le parole giuste per mouse o schermo touch
+if (matchMedia("(hover: none) and (pointer: coarse)").matches) {
+  document.querySelector(".deck-hint").textContent = "Scorri le carte con il dito o usa le frecce, poi tocca quella in primo piano per aprirla.";
+}
 let wheelAcc = 0;
 stage.addEventListener("wheel", (e) => {
   const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
