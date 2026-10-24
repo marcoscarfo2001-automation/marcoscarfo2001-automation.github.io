@@ -1,7 +1,7 @@
 /* ---------- Tokens ---------- */
 :root {
-  --bg: #f4f3ef;
-  --surface: #fcfcfa;
+  --bg: #e9ebef;
+  --surface: #f7f8fa;
   --ink: #16181d;
   --muted: #5c606b;
   --line: rgba(22, 24, 29, 0.12);
@@ -211,7 +211,7 @@ button { font: inherit; }
 .collection-head h2 { font-family: var(--serif); font-size: clamp(56px, 8.5vw, 120px); line-height: .92; letter-spacing: -0.02em; }
 .collection-sub { color: var(--muted); max-width: 520px; margin: 18px 0 0; font-size: 16px; }
 .collection-controls { display: flex; flex-wrap: wrap; gap: 10px; }
-.seg { display: inline-flex; padding: 3px; border-radius: var(--r); background: #e6e7ec; border: 1px solid var(--line); }
+.seg { display: inline-flex; padding: 3px; border-radius: var(--r); background: #dfe2e8; border: 1px solid var(--line); }
 .seg button {
   display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; color: var(--muted);
   font-size: 14px; padding: 9px 16px; border-radius: 2px; cursor: pointer; white-space: nowrap; transition: all .25s var(--ease);
@@ -234,7 +234,7 @@ button { font: inherit; }
   --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 50%; --lift: 0px;
   position: relative; display: flex; flex-direction: column; height: 100%;
   padding: 10px; border-radius: var(--r-card); overflow: hidden;
-  background: #e8e9ee;
+  background: #dde0e7;
   box-shadow: 0 0 0 1px rgba(22, 24, 29, .1), inset 0 1px 0 rgba(255, 255, 255, .7), 0 18px 40px -26px rgba(22, 24, 29, .5);
   transform: translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform .6s var(--ease), box-shadow .5s var(--ease);
