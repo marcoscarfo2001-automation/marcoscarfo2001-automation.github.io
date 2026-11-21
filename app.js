@@ -1,6 +1,6 @@
 // ---------- Dati dei progetti ----------
 // I progetti di lavoro sono anonimizzati: niente nomi di aziende, clienti o sistemi interni.
-// stats: i numeri della figurina · numbers: i numeri del dettaglio
+// hook: la frase della figurina · story: i paragrafi del dettaglio
 // gallery: [immagine, didascalia, sfondo scuro?]
 const projects = [
   {
@@ -12,18 +12,12 @@ const projects = [
     foot: "In azienda, 2026",
     hook: "Il tecnico manda un vocale su WhatsApp e riceve il preventivo in PDF, senza aprire il gestionale.",
     cover: "chat",
-    tint: "#2346c8",
+    tint: "#2448b8",
     tags: ["n8n", "GPT-4.1", "Whisper", "WhatsApp API", "ERP API"],
-    stats: [["un vocale", "parte da"], ["un PDF", "arriva a"], ["2", "agenti AI"]],
-    numbers: [["5", "fasi, dal messaggio al PDF"], ["2", "agenti AI in sequenza"], ["112", "nodi nel workflow"]],
-    text: "I tecnici descrivono il lavoro a voce o per iscritto. L'agente capisce cosa serve, riconosce il cliente, crea l'offerta nel gestionale e rimanda il preventivo in chat. Quando manca un'informazione la chiede al tecnico, così il documento contiene solo dati verificati.",
-    highlights: [
-      "Due agenti AI in sequenza: il primo trasforma la richiesta in dati ordinati (JSON), il secondo compila il modello del preventivo",
-      "La conversazione può durare più messaggi: l'agente ricorda a che punto si è, la sessione scade da sola e si può annullare in ogni momento",
-      "Il cliente viene trovato anche se il nome è scritto male (ricerca fuzzy e distanza di Levenshtein), e il tecnico conferma sempre la scelta",
-      "I vocali vengono trascritti con Whisper e ripuliti prima dell'analisi",
-      "Solo i numeri autorizzati possono usarlo, e ogni messaggio in arrivo è verificato con una firma (HMAC)",
-      "Il PDF viene salvato da solo sul cloud aziendale",
+    story: [
+      "I tecnici descrivono il lavoro con un vocale o un messaggio su WhatsApp. L'agente capisce cosa serve, riconosce il cliente, crea l'offerta nel gestionale e rimanda il preventivo in chat come PDF.",
+      "Dietro ci sono due agenti AI in fila. Il primo trasforma la richiesta in dati ordinati, il secondo compila il modello del preventivo. Quando manca un'informazione l'agente la chiede al tecnico, così nel documento finiscono solo dati verificati.",
+      "Il cliente viene trovato anche se il nome è scritto male, ma la scelta finale la conferma sempre il tecnico. Possono usarlo solo i numeri autorizzati, e ogni messaggio in arrivo è verificato con una firma.",
     ],
     role: "Progettazione del flusso, prompt engineering, logica di matching in JavaScript, documentazione tecnica e guida per i tecnici.",
     gallery: [
@@ -40,19 +34,14 @@ const projects = [
     year: "2026",
     title: "Corsi online automatici",
     foot: "In azienda, 2026",
-    hook: "Dal pagamento del corso online fino all'attestato, tutto avviene da solo, senza lavoro manuale.",
+    hook: "Quando un'azienda compra un corso online, codici di accesso e attestato arrivano senza che nessuno li prepari a mano.",
     cover: "flow",
-    tint: "#4566e6",
+    tint: "#3b5fd6",
     tags: ["n8n", "Shopify", "API e-learning", "Outlook", "Data Tables"],
-    stats: [["l'ordine", "parte da"], ["l'attestato", "arriva a"], ["2", "automazioni"]],
-    numbers: [["2", "automazioni che partono da sole"], ["2", "registri contro i duplicati"], ["44", "nodi nel workflow"]],
-    text: "Quando un ordine viene pagato sull'e-commerce, l'azienda cliente viene creata sulla piattaforma e-learning con i suoi codici di attivazione. Un secondo processo, a intervalli regolari, cerca i corsi conclusi, emette gli attestati e li invia. L'amministrazione interviene solo quando serve una decisione umana.",
-    highlights: [
-      "Ogni ordine e ogni attestato ha la sua riga nel registro, così nessuno viene lavorato due volte",
-      "Se manca la partita IVA ne viene generata una temporanea e l'amministrazione riceve un avviso per sostituirla",
-      "Prima dell'invio il sistema aspetta che il PDF dell'attestato sia davvero pronto",
-      "Gli errori sono gestiti per singolo elemento, con una notifica che contiene i dati utili per intervenire",
-      "Nessun nuovo tentativo automatico, per scelta: in caso di errore arriva un avviso, così non si rischiano codici duplicati",
+    story: [
+      "Appena un ordine viene pagato sull'e-commerce, l'azienda cliente nasce sulla piattaforma e-learning con i suoi codici di attivazione. A intervalli regolari un secondo processo cerca i corsi conclusi, emette gli attestati e li invia.",
+      "Ogni ordine e ogni attestato ha una riga in un registro, così nessuno viene lavorato due volte. Se manca la partita IVA ne viene creata una temporanea e l'amministrazione riceve un avviso per sostituirla.",
+      "In caso di errore arriva una notifica con i dati utili per intervenire, e niente riparte da solo. È una scelta voluta, per non rischiare codici duplicati.",
     ],
     role: "Analisi del processo, progettazione e sviluppo del workflow, documentazione tecnica e operativa.",
     gallery: [
@@ -68,23 +57,16 @@ const projects = [
     year: "2026",
     title: "Gestionale da campo",
     foot: "In azienda, 2026",
-    hook: "L'app dei tecnici sul campo, per timbrare con il GPS e far firmare al cliente il foglio di lavoro.",
+    hook: "Un'app per i tecnici di un'azienda di impianti, che dal cantiere timbrano e fanno firmare il foglio di lavoro.",
     cover: "screens",
-    tint: "#b08d57",
+    tint: "#9a7440",
     tags: ["React", "Express", "PostgreSQL", "PWA", "Replit Agent"],
-    stats: [["telefono", "si usa da"], ["con GPS", "timbratura"], ["2", "firme digitali"]],
-    numbers: [["11", "sezioni dell'app"], ["80 m", "raggio della verifica GPS"], ["2", "firme sul foglio di lavoro"]],
-    text: "Un'app da installare sul telefono per un'azienda di impianti. Il manager pianifica i turni, i tecnici timbrano con verifica della posizione e compilano il foglio di lavoro dal cantiere, con foto e dettatura vocale. Il cliente firma e il PDF è pronto. L'amministrazione controlla ore e costi e li invia al gestionale.",
-    highlights: [
-      "La timbratura è valida solo entro 80 metri dal magazzino (geofence), e il tempo di rientro viene stimato con OSRM",
-      "Foglio di lavoro a fasi, con materiali, foto e doppia firma su canvas",
-      "Le foto scattate senza rete restano sul telefono (IndexedDB) e partono da sole quando torna il segnale",
-      "Notifiche push all'assegnazione di un turno",
-      "Prima di inviare le ore al gestionale, un semaforo mostra all'amministrazione quali giornate sono complete, e nessuna viene inviata due volte",
-      "Accesso con PIN, blocco dopo troppi tentativi sbagliati, backup e ripristino del database",
-      "Informativa privacy per i dipendenti e condizioni d'uso curate insieme al progetto",
+    story: [
+      "Un'app da installare sul telefono. Il manager pianifica i turni, i tecnici timbrano con la verifica della posizione e compilano il foglio di lavoro dal cantiere, con foto e dettatura vocale. Alla fine il cliente firma e il PDF è pronto.",
+      "La timbratura vale solo entro 80 metri dal magazzino. Le foto scattate senza rete restano sul telefono e partono da sole quando torna il segnale.",
+      "Prima che le ore arrivino al gestionale, un semaforo mostra all'amministrazione quali giornate sono complete. L'applicazione l'ho sviluppata guidando l'agente AI di Replit.",
     ],
-    role: "Progettazione funzionale su lavagna dell'intera applicazione, architettura e integrazioni, sviluppo guidando l'agente AI di Replit, relazione tecnica.",
+    role: "Progettazione funzionale su lavagna, architettura e integrazioni, sviluppo con l'agente AI di Replit, relazione tecnica.",
     gallery: [
       ["assets/campo-cal-desktop.jpg", "Pianificazione settimanale"],
       ["assets/campo-cal-mobile.jpg", "Il calendario da telefono"],
@@ -104,19 +86,14 @@ const projects = [
     year: "2026",
     title: "Proforme automatiche",
     foot: "In azienda, 2026",
-    hook: "Crea da sola le proforme per i lavori da fatturare, con l'AI che legge i dati dalle offerte in PDF.",
+    hook: "Le proforme si preparano da sole dai lavori da fatturare, con l'AI che legge i dati delle offerte in PDF.",
     cover: "invoice",
     tint: "#1c3592",
     tags: ["n8n", "OpenAI", "Fatture in Cloud", "ERP API"],
-    stats: [["offerte PDF", "legge"], ["proforme", "crea"], ["0", "fatture doppie"]],
-    numbers: [["0", "fatture doppie"], ["33", "nodi nel workflow"]],
-    text: "Il workflow trova nel gestionale i lavori pronti da fatturare, recupera il cliente, fa leggere a un modello di AI i dati dell'offerta in PDF e crea la proforma nel software di fatturazione, già assegnata al centro di ricavo giusto.",
-    highlights: [
-      "Un registro tiene traccia di ogni lavoro già fatturato, così nessuno viene fatturato due volte",
-      "La risposta dell'AI viene controllata e, se non è affidabile, il workflow prosegue per una strada alternativa senza AI",
-      "Ogni proforma viene assegnata in automatico al centro di ricavo corretto",
-      "Gli errori vengono raccolti in un formato unico e smistati per tipo",
-      "Modello dei dati definito su carta e lavagna prima di scrivere un nodo",
+    story: [
+      "Il workflow trova nel gestionale i lavori pronti da fatturare e recupera il cliente. Un modello di AI legge i dati dell'offerta in PDF, poi la proforma nasce nel software di fatturazione già assegnata al centro di ricavo giusto.",
+      "Un registro tiene traccia di ogni lavoro fatturato, così nessuno viene fatturato due volte. La risposta dell'AI viene controllata e, se non è affidabile, il workflow prosegue per una strada senza AI.",
+      "Il modello dei dati l'abbiamo definito su carta e alla lavagna prima di scrivere un solo nodo.",
     ],
     role: "Progettazione e sviluppo in coppia con un collega, documentazione tecnica.",
     gallery: [
@@ -130,25 +107,19 @@ const projects = [
     kind: "Tesi di laurea",
     year: "Università",
     title: "Dataware",
-    hook: "Il sistema della mia tesi legge le privacy policy, ne misura il rischio e spiega ogni punteggio.",
+    foot: "Università, da solo",
+    hook: "La mia tesi. Un sistema che legge le privacy policy e spiega, criterio per criterio, quanto rischi accettandole.",
     cover: "risk",
-    tint: "#2346c8",
+    tint: "#2448b8",
     rare: true,
     tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
-    stats: [["60", "piattaforme lette"], ["10", "criteri"], ["9 su 10", "classi corrette"]],
-    numbers: [["60", "piattaforme annotate a mano"], ["10", "criteri di valutazione"], ["9 su 10", "classi di rischio corrette"], ["0.64", "F1 del modello di machine learning"]],
-    text: "Privacy policy e Termini di Servizio sono i documenti più firmati e meno compresi del digitale. Ho costruito un sistema di annotazione su 60 piattaforme reali e 10 criteri che uniscono i principi del GDPR alla logica contrattuale. Su questa base ho confrontato modelli supervisionati e non supervisionati e ho costruito un prototipo RAG che valuta nuove policy partendo dal giudizio umano, spiegando ogni punteggio.",
-    highlights: [
-      "Un dataset costruito da zero: 60 piattaforme annotate a mano su 10 criteri, con punteggi da 1 a 5 e cinque classi di rischio",
-      "Un modello di machine learning che passa da un F1 di 0.48, guardando solo le parole (TF-IDF), a 0.64 con segnali costruiti sui dieci criteri. L'F1 va da 0 a 1 e misura quanto spesso il modello indovina la classe di rischio. Con i punteggi assegnati a mano si arriva a 0.95",
-      "Due modelli non supervisionati, LDA e K-Means, raggruppano le piattaforme per settore commerciale e non distinguono il livello di rischio",
-      "Legal-BERT, pre-addestrato su testi giuridici, si ferma a 0.475, allo stesso livello del modello più semplice",
-      "Un prototipo RAG in n8n che consulta criteri, scale e casi già annotati e motiva il punteggio su ognuno dei dieci criteri",
-      "Validazione su dieci piattaforme mai viste: classe di rischio corretta in nove casi, con uno scarto medio di 1.7 punti",
-      "Ogni valutazione si può aprire e verificare criterio per criterio, perché le regole del sistema sono pubbliche",
-      "I limiti sono dichiarati: il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema può valutare soltanto ciò che le piattaforme scrivono nei documenti",
+    story: [
+      "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
+      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, si ferma a un F1 di 0.475, come il modello più semplice.",
+      "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
+      "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
     ],
-    role: "Progetto individuale: ricerca, costruzione del dataset, modelli di ML, prototipo RAG, design dell'app e tesi.",
+    role: "Progetto individuale, dalla ricerca al dataset, dai modelli di ML al prototipo RAG, fino al design dell'app e alla tesi.",
     gallery: [
       ["assets/dataware-landing.jpg", "«Ogni Accetto ha un prezzo»"],
       ["assets/dataware-app1.jpg", "L'app: la community", true],
@@ -164,23 +135,18 @@ const projects = [
     group: "uni",
     kind: "Hackathon aziendale",
     year: "1° posto",
-    foot: "Progetto di gruppo",
+    foot: "In squadra, in quattro",
     title: "Playence",
-    hook: "Sessioni di allenamento con i campioni, poi l'AI analizza com'è andata. Vincitore di un hackathon.",
+    hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
     cover: "phones",
     tint: "#3b7bd0",
     rare: true,
     badge: "1° posto",
     tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
-    stats: [["1° posto", "risultato"], ["4 persone", "team"], ["3", "profili utente"]],
-    numbers: [["1°", "posto all'hackathon"], ["4", "persone nel team"]],
-    text: "Progetto vincitore di un hackathon aziendale. Una piattaforma che mette in contatto sportivi amatori e campioni per sessioni esclusive. Dopo l'evento i dati del coach e dei dispositivi indossabili passano da un flusso n8n con AI che restituisce un'analisi della performance.",
-    highlights: [
-      "Personas e scenari d'uso per tre profili di utente",
-      "Frontend Angular con Tailwind e Angular Material, grafici delle metriche biometriche",
-      "Backend ASP.NET Core con API REST e SQL Server",
-      "Flusso n8n per l'analisi AI dei dati da wearable",
-      "Mercato, SWOT e business model presentati alla giuria",
+    story: [
+      "Il progetto ha vinto un hackathon aziendale. È una piattaforma che mette in contatto sportivi amatori e campioni per sessioni di allenamento esclusive.",
+      "Dopo l'evento, i dati del coach e dei dispositivi indossabili passano da un flusso n8n con l'AI, che restituisce un'analisi della performance. Il frontend è in Angular, il backend in ASP.NET Core con SQL Server.",
+      "Alla giuria abbiamo presentato anche il mercato, l'analisi SWOT e il modello di business, partendo da personas e scenari d'uso per tre profili di utente.",
     ],
     role: "Progettazione del flusso AI in n8n, architettura e presentazione, in un team di quattro persone.",
     gallery: [
@@ -198,19 +164,15 @@ const projects = [
     kind: "Design di un'app",
     year: "Università",
     title: "Gufy",
+    foot: "Università, in coppia",
     hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
     cover: "gufy",
-    tint: "#c9962c",
+    tint: "#b38423",
     tags: ["UX research", "Personas", "Storyboard", "Figma"],
-    stats: [["2 persone", "team"], ["Figma", "prototipo"]],
-    numbers: [["2", "persone nel team"], ["1", "prototipo interattivo su Figma"]],
-    text: "Un gufo che veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Un percorso completo di progettazione centrata sull'utente, dal questionario al prototipo interattivo, realizzato in coppia.",
-    highlights: [
-      "Questionario e sintesi dei risultati",
-      "Personas, scenari, requisiti funzionali e non funzionali",
-      "Modello concettuale, metafore d'interfaccia, user story e user flow",
-      "Storyboard e prototipo interattivo su Figma",
-      "Un'interfaccia pensata per chiedere poca attenzione, perché chi la usa è spesso stanco",
+    story: [
+      "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
+      "Dalle risposte al questionario sono nati personas, scenari e requisiti. Su quella base abbiamo costruito il modello concettuale, gli user flow e lo storyboard.",
+      "L'interfaccia chiede pochissima attenzione, perché chi la usa è spesso stanco.",
     ],
     role: "Ricerca utente, progettazione dell'interazione e prototipazione.",
     gallery: [
@@ -230,18 +192,14 @@ const projects = [
     kind: "Database e analisi",
     year: "Università",
     title: "Streaming musicale",
+    foot: "Università, da solo",
     hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
     cover: "schema",
-    tint: "#646a78",
+    tint: "#5f6573",
     tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
-    stats: [["lo schema", "parte da"], ["le analisi", "arriva a"], ["2", "modelli di mining"]],
-    numbers: [["3", "livelli: database, data warehouse, data mining"], ["2", "modelli di data mining"]],
-    text: "Ho progettato il database di una piattaforma di streaming, un data warehouse per analizzare gli ascolti e due modelli di data mining che trovano le tendenze per età e periodo dell'anno.",
-    highlights: [
-      "Modello concettuale, ristrutturazione e modello logico",
-      "Data warehouse a fiocco di neve e operazioni OLAP",
-      "Cluster analysis sugli ascolti",
-      "Alberi di decisione per prevedere il genere per fascia d'età e mese",
+    story: [
+      "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
+      "Sopra c'è un data warehouse a fiocco di neve per analizzare gli ascolti con le operazioni OLAP. Due modelli di data mining, una cluster analysis e un albero di decisione, cercano le tendenze per fascia d'età e mese dell'anno.",
     ],
     role: "Progetto individuale.",
     gallery: [
@@ -295,7 +253,7 @@ platformsEl.innerHTML = platforms.map((p) =>
 ).join("");
 
 criteriaEl.innerHTML =
-  `<p class="mono-label">Il dettaglio di <b id="crit-name">TikTok</b>, criterio per criterio</p>` +
+  `<p class="crit-title">Il dettaglio di <b id="crit-name">TikTok</b>, criterio per criterio</p>` +
   criteriaNames.map((k) => `<div class="crit"><span>${k}</span><i></i><b></b></div>`).join("");
 const critRows = [...criteriaEl.querySelectorAll(".crit")];
 
@@ -415,18 +373,17 @@ const numberOf = (p) => pad2(projects.indexOf(p) + 1);
 
 function cardHTML(p, i, inDeck) {
   return `
-  <button type="button" class="card${p.rare ? " is-rare" : ""}${inDeck ? "" : " reveal"}" data-id="${p.id}" data-index="${i}"
+  <button type="button" class="card${p.rare ? " is-rare" : ""}" data-id="${p.id}" data-index="${i}"
     style="--tint:${p.tint}" aria-label="${p.title}: apri il progetto">
     <span class="card-inner">
-      <span class="card-top"><span class="card-no">N° ${numberOf(p)}</span><span class="card-kind">${p.kind}</span></span>
+      <span class="card-top"><span class="card-no">${numberOf(p)}</span><span class="card-kind">${p.kind}</span></span>
       <span class="card-media">${covers[p.cover]()}${p.badge ? `<span class="seal">★ ${p.badge}</span>` : ""}</span>
       <span class="card-body">
         <span class="card-title">${p.title}</span>
         <span class="card-hook">${p.hook}</span>
-        <span class="card-stats">${p.stats.map(([v, l]) => `<span><small>${l}</small><i></i><b>${v}</b></span>`).join("")}</span>
+        <span class="card-stack">${p.tags.slice(0, 3).join(", ")}</span>
         <span class="card-foot"><span>${p.foot || p.year}</span><span class="card-open">Apri</span></span>
       </span>
-      <span class="card-shine" aria-hidden="true"></span>
     </span>
   </button>`;
 }
@@ -444,10 +401,8 @@ document.addEventListener("pointermove", (e) => {
   if (!inner || !canTilt) return;
   const r = inner.getBoundingClientRect();
   const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-  inner.style.setProperty("--mx", `${px * 100}%`);
-  inner.style.setProperty("--my", `${py * 100}%`);
-  inner.style.setProperty("--ry", `${(px - 0.5) * 10}deg`);
-  inner.style.setProperty("--rx", `${(0.5 - py) * 8}deg`);
+  inner.style.setProperty("--ry", `${(px - 0.5) * 8}deg`);
+  inner.style.setProperty("--rx", `${(0.5 - py) * 6}deg`);
 });
 document.addEventListener("pointerout", (e) => {
   const inner = e.target.closest?.(".card-inner");
@@ -480,11 +435,6 @@ function render(first) {
   stage.innerHTML = list.map((p, i) => cardHTML(p, i, true)).join("");
   fitCovers(album);
   fitCovers(stage);
-  if (first) observeReveal(album);
-  else album.querySelectorAll(".reveal").forEach((c, i) => {
-    c.style.transitionDelay = `${i * 50}ms`;
-    requestAnimationFrame(() => c.classList.add("in"));
-  });
   active = Math.min(active, list.length - 1);
   layoutDeck();
 }
@@ -595,10 +545,9 @@ function openProject(id) {
   const p = projects.find((x) => x.id === id);
   body.style.setProperty("--tint", p.tint);
   body.innerHTML = `
-    <p class="m-meta"><span class="m-no">N° ${numberOf(p)}</span> ${p.kind}, ${p.year}</p>
+    <p class="m-meta"><span class="m-no">${numberOf(p)}</span> ${p.kind}, ${p.foot || p.year}</p>
     <h2 class="m-title" id="modal-title">${p.title}</h2>
     <p class="m-hook">${p.hook}</p>
-    <div class="m-numbers">${p.numbers.map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("")}</div>
     ${p.gallery.length ? `<div class="m-gallery-wrap">
       <button class="g-btn g-prev" aria-label="Scorri indietro">←</button>
       <div class="m-gallery">${p.gallery.map(([src, cap, dark], i) => `
@@ -607,12 +556,10 @@ function openProject(id) {
     </div>` : ""}
     <div class="m-cols">
       <div>
-        <p class="m-text">${p.text}</p>
-        <h3>Punti chiave</h3>
-        <ul class="m-list">${p.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>
+        <div class="m-story">${p.story.map((t) => `<p>${t}</p>`).join("")}</div>
       </div>
       <div class="m-side">
-        <h3>Stack</h3>
+        <h3>Strumenti</h3>
         <p class="m-stack">${p.tags.join(", ")}</p>
         <h3>Il mio ruolo</h3>
         <p class="m-text">${p.role}</p>
@@ -695,31 +642,5 @@ lightbox.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") showImage(lbIndex + 1);
   if (e.key === "ArrowLeft") showImage(lbIndex - 1);
 });
-
-// ---------- Metodo: linea che collega i passi ----------
-const graph = document.getElementById("graph");
-const graphPath = document.getElementById("graph-path");
-
-function drawGraph() {
-  const g = graph.getBoundingClientRect();
-  const pts = [...graph.querySelectorAll(".step-n")].map((n) => {
-    const r = n.getBoundingClientRect();
-    return [r.left + r.width / 2 - g.left, r.top + r.height / 2 - g.top];
-  });
-  // curva morbida che passa per il centro di ogni nodo
-  let d = `M ${pts[0][0]} ${pts[0][1]}`;
-  for (let i = 1; i < pts.length; i++) {
-    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], mx = (x0 + x1) / 2;
-    d += ` C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}`;
-  }
-  graphPath.setAttribute("d", d);
-  graphPath.style.setProperty("--len", Math.ceil(graphPath.getTotalLength()));
-}
-drawGraph();
-window.addEventListener("resize", drawGraph);
-document.fonts?.ready.then(drawGraph);
-new IntersectionObserver((entries, obs) => {
-  if (entries[0].isIntersecting) { graph.classList.add("drawn"); obs.disconnect(); }
-}, { threshold: 0.3 }).observe(graph);
 
 observeReveal();
