@@ -454,19 +454,50 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 19px; lin
 .card:not(:hover):not(.is-active) .cover *::after { animation-play-state: paused !important; }
 
 /* ---------- Metodo ---------- */
-.method {
-  padding: clamp(96px, 11vw, 150px) var(--gutter) clamp(72px, 9vw, 120px); max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 96px); align-items: center;
-}
-.method h2 { font-family: var(--serif); font-size: clamp(48px, 7vw, 96px); line-height: .95; letter-spacing: -0.02em; margin-bottom: 28px; }
-.method-text p { margin: 0 0 18px; max-width: 33em; color: var(--muted); }
-.method-text p:first-of-type { color: var(--ink); font-size: clamp(18px, 1.5vw, 20px); }
-.method-sheets { position: relative; display: grid; grid-template-columns: 1fr; padding-top: 16px; }
+.method { padding: clamp(96px, 11vw, 150px) var(--gutter) clamp(72px, 9vw, 110px); max-width: 1400px; margin: 0 auto; }
+.method-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.method h2 { font-family: var(--serif); font-size: clamp(48px, 7vw, 96px); line-height: .95; letter-spacing: -0.02em; }
+.method-intro { margin: 20px 0 0; max-width: 26em; font-size: clamp(17px, 1.5vw, 20px); color: var(--muted); }
+/* i due fogli veri, piccoli e sovrapposti */
+.method-sheets { position: relative; max-width: 470px; justify-self: end; width: 100%; }
 .method-sheets figure { margin: 0; }
-.method-sheets .sheet-a { width: 86%; transform: rotate(-2deg); position: relative; z-index: 1; }
-.method-sheets .sheet-b { width: 46%; justify-self: end; margin-top: -26%; transform: rotate(3.5deg); position: relative; z-index: 2; }
-.method-sheets figcaption { margin-top: 12px; font-size: 17px; }
-.method-sheets .sheet-a figcaption { max-width: 56%; font-size: 16px; }
+.method-sheets .sheet-a { width: 84%; transform: rotate(-2deg); position: relative; z-index: 1; }
+.method-sheets .sheet-b { position: absolute; z-index: 2; width: 34%; right: 0; top: 34%; transform: rotate(4deg); }
+.method-sheets figcaption { margin-top: 12px; font-size: 16px; max-width: 64%; text-wrap: balance; }
+
+/* il percorso: un tratto di pennarello blu che passa per i sei passi */
+.graph { position: relative; margin-top: clamp(56px, 7vw, 96px); }
+.graph-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.graph-lines path {
+  fill: none; stroke: var(--accent); stroke-opacity: .8; stroke-width: 2.4; stroke-linecap: round;
+  stroke-dasharray: var(--len, 4000); stroke-dashoffset: var(--len, 4000);
+  transition: stroke-dashoffset 2.4s var(--ease);
+}
+.graph.drawn .graph-lines path { stroke-dashoffset: 0; }
+
+/* Tre fasce: testi dei passi dispari, fascia dei nodi, testi dei passi pari */
+.steps {
+  list-style: none; padding: 0; margin: 0; position: relative;
+  display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: auto 170px auto; column-gap: 28px;
+}
+.steps li { display: contents; }
+/* un cerchietto a pennarello per ogni passo: il nome del passo fa da etichetta */
+.step-n {
+  grid-column: var(--c); grid-row: 2; justify-self: center;
+  width: 16px; height: 16px; border-radius: 50% 46% 52% 48%;
+  border: 2px solid var(--ink); background: var(--bg);
+  transition: background .3s, border-color .3s; position: relative; z-index: 1;
+}
+.steps li:nth-child(odd) .step-n { align-self: start; }
+.steps li:nth-child(even) .step-n { align-self: end; }
+.steps li:hover .step-n { background: var(--accent); border-color: var(--accent); }
+
+.step-text { grid-column: var(--c); text-align: center; max-width: 250px; justify-self: center; }
+.steps li:nth-child(odd) .step-text { grid-row: 1; align-self: end; padding-bottom: 26px; }
+.steps li:nth-child(even) .step-text { grid-row: 3; padding-top: 26px; }
+.steps h3 { font-family: var(--serif); font-size: clamp(28px, 2.4vw, 34px); line-height: 1.05; margin: 0 0 10px; transition: color .3s; }
+.steps li:hover h3 { color: var(--accent); }
+.steps p { margin: 0; color: var(--muted); font-size: 15px; }
 
 /* ---------- Contact ---------- */
 .contact { padding: clamp(88px, 10vw, 120px) var(--gutter); max-width: 1400px; margin: 0 auto; border-top: 1px solid var(--line); }
@@ -567,6 +598,13 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 19px; lin
 }
 @media (max-width: 1100px) {
   .feature-grid { grid-template-columns: 1fr; }
+  /* il percorso diventa una linea verticale di pennarello */
+  .graph-lines { display: none; }
+  .steps { display: block; border-left: 2px solid color-mix(in srgb, var(--accent) 70%, transparent); margin-left: 8px; }
+  .steps li { display: block; position: relative; padding: 0 0 36px 32px; }
+  .steps li:last-child { padding-bottom: 0; }
+  .step-n { position: absolute; left: -10px; top: 10px; }
+  .steps li .step-text { text-align: left; max-width: 40em; padding: 0 !important; }
 }
 @media (max-width: 1000px) {
   .br-lg { display: none; }
@@ -574,8 +612,8 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 19px; lin
   .hero-board { justify-self: start; max-width: 480px; margin-top: 8px; }
   .about { grid-template-columns: 1fr; gap: 32px; }
   .about-side { padding-top: 0; max-width: 40em; }
-  .method { grid-template-columns: 1fr; }
-  .method-sheets { max-width: 560px; }
+  .method-head { grid-template-columns: 1fr; }
+  .method-sheets { justify-self: start; max-width: 440px; }
 }
 @media (max-width: 900px) {
   .album { grid-template-columns: repeat(2, minmax(0, 1fr)); }

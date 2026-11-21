@@ -643,4 +643,30 @@ lightbox.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") showImage(lbIndex - 1);
 });
 
+// ---------- Metodo: linea che collega i passi ----------
+const graph = document.getElementById("graph");
+const graphPath = document.getElementById("graph-path");
+
+function drawGraph() {
+  const g = graph.getBoundingClientRect();
+  const pts = [...graph.querySelectorAll(".step-n")].map((n) => {
+    const r = n.getBoundingClientRect();
+    return [r.left + r.width / 2 - g.left, r.top + r.height / 2 - g.top];
+  });
+  // curva morbida che passa per il centro di ogni nodo
+  let d = `M ${pts[0][0]} ${pts[0][1]}`;
+  for (let i = 1; i < pts.length; i++) {
+    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], mx = (x0 + x1) / 2;
+    d += ` C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}`;
+  }
+  graphPath.setAttribute("d", d);
+  graphPath.style.setProperty("--len", Math.ceil(graphPath.getTotalLength()));
+}
+drawGraph();
+window.addEventListener("resize", drawGraph);
+document.fonts?.ready.then(drawGraph);
+new IntersectionObserver((entries, obs) => {
+  if (entries[0].isIntersecting) { graph.classList.add("drawn"); obs.disconnect(); }
+}, { threshold: 0.3 }).observe(graph);
+
 observeReveal();
