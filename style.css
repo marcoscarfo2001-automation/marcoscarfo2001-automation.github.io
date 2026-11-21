@@ -455,15 +455,9 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 19px; lin
 
 /* ---------- Metodo ---------- */
 .method { padding: clamp(96px, 11vw, 150px) var(--gutter) clamp(72px, 9vw, 110px); max-width: 1400px; margin: 0 auto; }
-.method-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.method-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 48px; flex-wrap: wrap; }
 .method h2 { font-family: var(--serif); font-size: clamp(48px, 7vw, 96px); line-height: .95; letter-spacing: -0.02em; }
-.method-intro { margin: 20px 0 0; max-width: 26em; font-size: clamp(17px, 1.5vw, 20px); color: var(--muted); }
-/* i due fogli veri, piccoli e sovrapposti */
-.method-sheets { position: relative; max-width: 470px; justify-self: end; width: 100%; }
-.method-sheets figure { margin: 0; }
-.method-sheets .sheet-a { width: 84%; transform: rotate(-2deg); position: relative; z-index: 1; }
-.method-sheets .sheet-b { position: absolute; z-index: 2; width: 34%; right: 0; top: 34%; transform: rotate(4deg); }
-.method-sheets figcaption { margin-top: 12px; font-size: 16px; max-width: 64%; text-wrap: balance; }
+.method-intro { margin: 0 0 8px; max-width: 26em; font-size: clamp(17px, 1.5vw, 20px); color: var(--muted); }
 
 /* il percorso: un tratto di pennarello blu che passa per i sei passi */
 .graph { position: relative; margin-top: clamp(56px, 7vw, 96px); }
@@ -612,8 +606,6 @@ figcaption { font-family: var(--serif); font-style: italic; font-size: 19px; lin
   .hero-board { justify-self: start; max-width: 480px; margin-top: 8px; }
   .about { grid-template-columns: 1fr; gap: 32px; }
   .about-side { padding-top: 0; max-width: 40em; }
-  .method-head { grid-template-columns: 1fr; }
-  .method-sheets { justify-self: start; max-width: 440px; }
 }
 @media (max-width: 900px) {
   .album { grid-template-columns: repeat(2, minmax(0, 1fr)); }
