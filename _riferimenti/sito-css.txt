@@ -1,0 +1,16 @@
+https://marcoscarfo2001-automation.github.io/
+Viewport 1440x900
+
+h1: "Instrument Serif", Georgia, serif
+h2: Inter, system-ui, sans-serif
+p: Inter, system-ui, sans-serif
+button: Inter, system-ui, sans-serif
+
+Blocchi grandi (dall'alto):
+1. section.hero | top 56px h 540px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 48px / 48px
+2. section#profilo.about | top 596px h 661px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 96px / 96px
+3. section#metodo.method | top 1257px h 921px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 96px / 96px
+4. div.collection-head | top 2274px h 184px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 0px / 0px
+5. div#album.album | top 2505px h 1081px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 0px / 0px
+6. section#dataware.feature | top 3683px h 1234px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 96px / 96px
+7. section#contatti.contact | top 4917px h 476px | bg proprio rgba(0, 0, 0, 0) | bg effettivo rgb(236, 238, 243) (da antenato) | padding 96px / 96px
