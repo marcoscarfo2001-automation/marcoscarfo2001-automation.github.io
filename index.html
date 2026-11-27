@@ -13,27 +13,26 @@
   <meta property="og:image" content="https://marcoscarfo2001-automation.github.io/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
-  <meta property="og:image:alt" content="Marco Scarfò, software e AI developer, accanto alla lavagna di un progetto">
+  <meta property="og:image:alt" content="Marco Scarfò, software e AI developer, con le figurine dei suoi progetti">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
     <header class="topbar">
     <a href="#top" class="brand">Marco Scarfò</a>
     <nav>
-      <a href="#profilo">Profilo</a>
-      <a href="#dataware">Dataware</a>
-      <a href="#progetti">Progetti</a>
       <a href="#metodo">Metodo</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#dataware">Dataware</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- HERO: chi sono, con la lavagna vera accanto -->
+    <!-- APERTURA: chi sono, e il mazzo delle figurine che esce dal bordo -->
     <section class="hero">
       <div class="hero-text">
         <h1 class="reveal">Marco Scarfò</h1>
@@ -43,15 +42,11 @@
           In azienda costruisco automazioni e software che usano l'AI.
         </p>
         <div class="hero-cta reveal">
-          <a class="btn btn-solid" href="#progetti">Guarda i progetti</a>
+          <a class="btn btn-solid" href="#progetti">Sfoglia la collezione</a>
           <a class="text-link" href="#contatti">Scrivimi</a>
         </div>
       </div>
-      <figure class="hero-board reveal">
-        <span class="pinned pinned-back"><img src="assets/campo-grafo.jpg" alt="Lavagna con il grafo delle timbrature di una giornata di lavoro" width="1050" height="1400"></span>
-        <span class="pinned pinned-front"><img src="assets/campo-sistema.jpg" alt="Lavagna con gli schizzi delle schermate e delle sezioni del gestionale" width="1050" height="1400"></span>
-        <figcaption>Una delle mie lavagne di progetto</figcaption>
-      </figure>
+      <div class="hero-deck" id="hero-deck" aria-label="Alcuni progetti, aprili con un clic"></div>
     </section>
 
     <!-- PROFILO -->
@@ -59,7 +54,7 @@
       <div>
         <p class="about-big">
           La triennale in ICT è un percorso ibrido, in cui l'informatica si studia accanto a sociologia,
-          diritto e comunicazione. Mi ha insegnato a progettare un sistema <mark>partendo dalle esigenze delle persone</mark> che lo useranno.
+          diritto e comunicazione. Mi ha insegnato a progettare un sistema <mark>partendo dalle esigenze delle persone</mark> che lo&nbsp;useranno.
         </p>
         <p class="about-more">
           Con la magistrale in Intelligenza Artificiale sto rafforzando la parte tecnica, per arrivare a guidare
@@ -80,118 +75,10 @@
       </div>
     </section>
 
-    <!-- IN EVIDENZA: DATAWARE -->
-    <section id="dataware" class="feature">
-      <div class="feature-head">
-        <div>
-          <p class="feature-kicker">La mia tesi di laurea</p>
-          <h2>Dataware</h2>
-          <p class="feature-lede">
-            «Accetto i termini e le condizioni» è stata definita la bugia più grande di Internet.
-            Dataware legge privacy policy e termini di servizio al posto tuo e ti spiega, criterio per criterio, cosa stai accettando.
-          </p>
-        </div>
-        <img class="feature-logo" src="assets/dataware-logo.png" alt="Logo di Dataware">
-      </div>
-
-      <div class="feature-grid">
-        <!-- Scala del rischio interattiva -->
-        <div class="scale-card">
-          <p class="scale-title">Scegli una piattaforma</p>
-          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio), quindi la somma dei dieci va da 10 a 50.</p>
-          <div class="platforms" id="platforms" role="tablist" aria-label="Piattaforme"></div>
-
-          <div class="scale-readout" aria-live="polite">
-            <div class="scale-score"><span id="score-n">39</span><small>/50</small></div>
-            <div>
-              <p class="scale-class" id="score-class"></p>
-              <p class="scale-note" id="score-note"></p>
-            </div>
-          </div>
-
-          <div class="scale">
-            <div class="scale-bands">
-              <span style="--from:10;--to:18">Minimal</span>
-              <span style="--from:19;--to:26">Low</span>
-              <span style="--from:27;--to:34">Moderate</span>
-              <span style="--from:35;--to:42">Significant</span>
-              <span style="--from:43;--to:50">Critical</span>
-            </div>
-            <div class="scale-marker" id="marker"></div>
-            <div class="scale-ticks"><span>10, massima tutela</span><span>50, massimo rischio</span></div>
-          </div>
-
-          <div class="criteria" id="criteria"></div>
-        </div>
-
-        <!-- Il racconto della tesi, in prosa -->
-        <div class="feature-story">
-          <h3>Sessanta piattaforme lette a mano</h3>
-          <p>
-            Una raccolta di privacy policy classificate per rischio non esisteva, quindi l'ho costruita io.
-            Ogni piattaforma è valutata su dieci criteri presi dal GDPR e dai termini di servizio.
-          </p>
-          <p>
-            Le policy usano tutte lo stesso linguaggio rassicurante, e un modello che guarda solo le parole
-            si ferma a un F1 di <b>0.48</b>. Con segnali costruiti sui dieci criteri sale a <b>0.64</b>.
-            L'F1 va da 0 a 1 e dice quanto spesso il modello indovina la classe di rischio.
-          </p>
-          <p>
-            Il prototipo RAG, costruito in n8n, ragiona in un altro modo. Davanti a una policy nuova cerca
-            le piattaforme già valutate più simili e su quelle motiva un punteggio per ogni criterio.
-            Su dieci piattaforme mai viste ha indovinato la classe in <b>nove</b> casi.
-          </p>
-          <button class="feature-open" data-open="dataware">Apri la scheda della tesi</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGETTI: la collezione di figurine -->
-    <section id="progetti" class="collection">
-      <div class="collection-head">
-        <div>
-          <h2>La collezione</h2>
-          <p class="collection-sub">
-            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
-            Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
-          </p>
-        </div>
-        <div class="collection-controls">
-          <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
-            <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
-            <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
-            <button type="button" data-filter="uni" aria-pressed="false">Università e personali <sup></sup></button>
-          </div>
-          <div class="seg" role="group" aria-label="Cambia vista" id="views">
-            <button type="button" data-view="album" aria-pressed="true">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.2"/></svg>
-              Album
-            </button>
-            <button type="button" data-view="mazzo" aria-pressed="false">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="2" width="7" height="11" rx="1.4" transform="rotate(-14 8 8)"/><rect x="4.5" y="2.5" width="7" height="11" rx="1.4" transform="rotate(10 8 8)"/></svg>
-              Mazzo
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="album" id="album"></div>
-
-      <div class="deck" id="deck" hidden>
-        <div class="deck-stage" id="deck-stage" tabindex="0" role="region" aria-roledescription="mazzo di carte" aria-label="Progetti, una carta alla volta"></div>
-        <div class="deck-bar">
-          <button type="button" class="deck-btn" id="deck-prev" aria-label="Carta precedente">←</button>
-          <span class="deck-count" id="deck-count" aria-live="polite"></span>
-          <button type="button" class="deck-btn" id="deck-next" aria-label="Carta successiva">→</button>
-        </div>
-        <p class="deck-hint">Trascina le carte o usa le frecce, poi fai clic su quella in primo piano per aprirla.</p>
-      </div>
-    </section>
-
     <!-- METODO: i passi collegati da un tratto di pennarello -->
     <section id="metodo" class="method">
       <div class="method-head">
-        <h2>Il metodo</h2>
+        <h2 class="sec-title">Il metodo</h2>
         <p class="method-intro">Gli stessi passaggi a ogni progetto, quasi sempre partendo da un foglio o da una lavagna.</p>
       </div>
 
@@ -254,6 +141,107 @@
       </div>
     </section>
 
+    <!-- PROGETTI: la collezione di figurine -->
+    <section id="progetti" class="collection">
+      <div class="collection-head">
+        <div>
+          <h2 class="sec-title">La collezione</h2>
+          <p class="collection-sub">
+            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
+            Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
+          </p>
+        </div>
+        <div class="collection-controls">
+          <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
+            <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
+            <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
+            <button type="button" data-filter="uni" aria-pressed="false">Università e personali <sup></sup></button>
+          </div>
+          <div class="seg" role="group" aria-label="Cambia vista" id="views">
+            <button type="button" data-view="album" aria-pressed="true">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.2"/></svg>
+              Album
+            </button>
+            <button type="button" data-view="mazzo" aria-pressed="false">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="2" width="7" height="11" rx="1.4" transform="rotate(-14 8 8)"/><rect x="4.5" y="2.5" width="7" height="11" rx="1.4" transform="rotate(10 8 8)"/></svg>
+              Mazzo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="album" id="album"></div>
+
+      <div class="deck" id="deck" hidden>
+        <div class="deck-stage" id="deck-stage" tabindex="0" role="region" aria-roledescription="mazzo di carte" aria-label="Progetti, una carta alla volta"></div>
+        <div class="deck-bar">
+          <button type="button" class="deck-btn" id="deck-prev" aria-label="Carta precedente">←</button>
+          <span class="deck-count" id="deck-count" aria-live="polite"></span>
+          <button type="button" class="deck-btn" id="deck-next" aria-label="Carta successiva">→</button>
+        </div>
+        <p class="deck-hint">Trascina le carte o usa le frecce, poi fai clic su quella in primo piano per aprirla.</p>
+      </div>
+    </section>
+
+    <!-- DATAWARE: un progetto da vicino, dentro una card blu -->
+    <section id="dataware" class="feature">
+      <div class="feature-card">
+      <img class="feature-mark" src="assets/dataware-logo.png" alt="" aria-hidden="true">
+      <div class="feature-head">
+        <div>
+          <p class="feature-kicker">Un progetto da vicino, la mia tesi di laurea</p>
+          <h2>Dataware</h2>
+          <p class="feature-lede">
+            «Accetto i termini e le condizioni» è stata definita la bugia più grande di Internet.
+            Dataware legge privacy policy e termini di servizio al posto tuo e ti spiega, criterio per criterio, cosa stai accettando.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <!-- Scala del rischio interattiva -->
+        <div class="scale-card">
+          <p class="scale-title">Scegli una piattaforma</p>
+          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio), quindi la somma dei dieci va da 10 a 50.</p>
+          <div class="platforms" id="platforms" role="tablist" aria-label="Piattaforme"></div>
+
+          <div class="scale-readout" aria-live="polite">
+            <div class="scale-score"><span id="score-n">39</span><small>/50</small></div>
+            <div>
+              <p class="scale-class" id="score-class"></p>
+              <p class="scale-note" id="score-note"></p>
+            </div>
+          </div>
+
+          <div class="scale">
+            <div class="scale-bands">
+              <span style="--from:10;--to:18">Minimal</span>
+              <span style="--from:19;--to:26">Low</span>
+              <span style="--from:27;--to:34">Moderate</span>
+              <span style="--from:35;--to:42">Significant</span>
+              <span style="--from:43;--to:50">Critical</span>
+            </div>
+            <div class="scale-marker" id="marker"></div>
+            <div class="scale-ticks"><span>10, massima tutela</span><span>50, massimo rischio</span></div>
+          </div>
+
+          <div class="criteria" id="criteria"></div>
+        </div>
+
+        <!-- Il racconto della tesi, in prosa -->
+        <div class="feature-story">
+          <h3>Sessanta piattaforme lette a mano</h3>
+          <p>
+            Una raccolta di privacy policy classificate per rischio non esisteva, quindi l'ho costruita io,
+            valutando ogni piattaforma su dieci criteri presi dal GDPR. Il prototipo RAG parte da quelle valutazioni
+            e, su dieci piattaforme mai viste, ha indovinato la classe di rischio in nove casi.
+          </p>
+          <button class="feature-open" data-open="dataware">Apri la scheda della tesi</button>
+        </div>
+      </div>
+      </div>
+    </section>
+
     <!-- CONTATTI -->
     <section id="contatti" class="contact">
       <h2>Hai un'idea o un processo<br class="br-lg"> da semplificare?</h2>
@@ -287,6 +275,6 @@
     <button class="lb-btn lb-next" data-lb="1" aria-label="Immagine successiva">→</button>
   </dialog>
 
-  <script src="app.js?v=15"></script>
+  <script src="app.js?v=17"></script>
 </body>
 </html>

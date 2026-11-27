@@ -36,7 +36,7 @@ const projects = [
     foot: "In azienda, 2026",
     hook: "Quando un'azienda compra un corso online, codici di accesso e attestato arrivano senza che nessuno li prepari a mano.",
     cover: "flow",
-    tint: "#3b5fd6",
+    tint: "#3d5fd4",
     tags: ["n8n", "Shopify", "API e-learning", "Outlook", "Data Tables"],
     story: [
       "Appena un ordine viene pagato sull'e-commerce, l'azienda cliente nasce sulla piattaforma e-learning con i suoi codici di attivazione. A intervalli regolari un secondo processo cerca i corsi conclusi, emette gli attestati e li invia.",
@@ -59,7 +59,7 @@ const projects = [
     foot: "In azienda, 2026",
     hook: "Un'app per i tecnici di un'azienda di impianti, che dal cantiere timbrano e fanno firmare il foglio di lavoro.",
     cover: "screens",
-    tint: "#9a7440",
+    tint: "#1b3487",
     tags: ["React", "Express", "PostgreSQL", "PWA", "Replit Agent"],
     story: [
       "Un'app da installare sul telefono. Il manager pianifica i turni, i tecnici timbrano con la verifica della posizione e compilano il foglio di lavoro dal cantiere, con foto e dettatura vocale. Alla fine il cliente firma e il PDF è pronto.",
@@ -88,7 +88,7 @@ const projects = [
     foot: "In azienda, 2026",
     hook: "Le proforme si preparano da sole dai lavori da fatturare, con l'AI che legge i dati delle offerte in PDF.",
     cover: "invoice",
-    tint: "#1c3592",
+    tint: "#2f4fb8",
     tags: ["n8n", "OpenAI", "Fatture in Cloud", "ERP API"],
     story: [
       "Il workflow trova nel gestionale i lavori pronti da fatturare e recupera il cliente. Un modello di AI legge i dati dell'offerta in PDF, poi la proforma nasce nel software di fatturazione già assegnata al centro di ricavo giusto.",
@@ -115,7 +115,7 @@ const projects = [
     tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
     story: [
       "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
-      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, si ferma a un F1 di 0.475, come il modello più semplice.",
+      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, non è andato oltre il modello più semplice.",
       "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
       "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
     ],
@@ -139,7 +139,7 @@ const projects = [
     title: "Playence",
     hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
     cover: "phones",
-    tint: "#3b7bd0",
+    tint: "#4a6ad8",
     rare: true,
     badge: "1° posto",
     tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
@@ -167,7 +167,7 @@ const projects = [
     foot: "Università, in coppia",
     hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
     cover: "gufy",
-    tint: "#b38423",
+    tint: "#5671d0",
     tags: ["UX research", "Personas", "Storyboard", "Figma"],
     story: [
       "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
@@ -195,7 +195,7 @@ const projects = [
     foot: "Università, da solo",
     hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
     cover: "schema",
-    tint: "#5f6573",
+    tint: "#3b4a7d",
     tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
     story: [
       "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
@@ -209,6 +209,18 @@ const projects = [
     ],
   },
 ];
+
+// ---------- A capo ----------
+// l'ultima parola di paragrafi, titoli e didascalie resta attaccata alla penultima
+function glueLastWord(root = document) {
+  root.querySelectorAll("main p, main h1, main h2, main h3, figcaption, .card-hook, .m-story p, .m-hook").forEach((el) => {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    let last = null;
+    while (walker.nextNode()) if (walker.currentNode.textContent.trim()) last = walker.currentNode;
+    if (!last) return;
+    last.textContent = last.textContent.replace(/\s+(\S+)\s*$/, "\u00a0$1");
+  });
+}
 
 // ---------- Animazioni in entrata ----------
 const io = new IntersectionObserver((entries) => {
@@ -412,6 +424,14 @@ document.addEventListener("pointerout", (e) => {
   }
 });
 
+// ---------- Apertura: i quattro lavori in azienda, aperti a ventaglio ----------
+// sono le stesse carte della collezione: un clic apre il progetto
+const heroDeck = document.getElementById("hero-deck");
+heroDeck.innerHTML = ["agente", "campo", "proforma", "corsi"]
+  .map((id, i) => cardHTML(projects.find((p) => p.id === id), i, true)).join("");
+heroDeck.querySelectorAll(".card").forEach((c, i) => c.style.setProperty("--i", i));
+fitCovers(heroDeck);
+
 // ---------- Collezione: filtri, album e mazzo ----------
 const album = document.getElementById("album");
 const deck = document.getElementById("deck");
@@ -437,6 +457,7 @@ function render(first) {
   fitCovers(stage);
   active = Math.min(active, list.length - 1);
   layoutDeck();
+  glueLastWord(album);
 }
 
 function setPressed(group, attr, value) {
@@ -565,6 +586,7 @@ function openProject(id) {
         <p class="m-text">${p.role}</p>
       </div>
     </div>`;
+  glueLastWord(body);
   currentGallery = p.gallery;
   modal.showModal();
   body.scrollTop = 0;
@@ -669,4 +691,5 @@ new IntersectionObserver((entries, obs) => {
   if (entries[0].isIntersecting) { graph.classList.add("drawn"); obs.disconnect(); }
 }, { threshold: 0.3 }).observe(graph);
 
+glueLastWord();
 observeReveal();
