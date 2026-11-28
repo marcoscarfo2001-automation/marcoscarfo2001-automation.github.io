@@ -4,6 +4,113 @@
 // gallery: [immagine, didascalia, sfondo scuro?]
 const projects = [
   {
+    id: "gufy",
+    group: "uni",
+    kind: "Design di un'app",
+    year: "Università",
+    title: "Gufy",
+    foot: "Università, in coppia",
+    hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
+    cover: "gufy",
+    tint: "#5671d0",
+    tags: ["UX research", "Personas", "Storyboard", "Figma"],
+    story: [
+      "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
+      "Dalle risposte al questionario sono nati personas, scenari e requisiti. Su quella base abbiamo costruito il modello concettuale, gli user flow e lo storyboard.",
+      "L'interfaccia chiede pochissima attenzione, perché chi la usa è spesso stanco.",
+    ],
+    role: "Ricerca utente, progettazione dell'interazione e prototipazione.",
+    gallery: [
+      ["assets/gufy-owl.jpg", "La mascotte"],
+      ["assets/gufy-app1.jpg", "Benvenuto", true],
+      ["assets/gufy-app2.jpg", "Inserimento del viaggio", true],
+      ["assets/gufy-app3.jpg", "Anticipo della sveglia", true],
+      ["assets/gufy-app4.jpg", "Pronto: ora puoi riposare", true],
+      ["assets/gufy-story1.jpg", "Storyboard: si parte"],
+      ["assets/gufy-story2.jpg", "Storyboard: ti sveglio io"],
+      ["assets/gufy-pod.jpg", "Il GufyPod", true],
+    ],
+  },
+  {
+    id: "db",
+    group: "uni",
+    kind: "Database e analisi",
+    year: "Università",
+    title: "Streaming musicale",
+    foot: "Università, da solo",
+    hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
+    cover: "schema",
+    tint: "#3b4a7d",
+    tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
+    story: [
+      "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
+      "Sopra c'è un data warehouse a fiocco di neve per analizzare gli ascolti con le operazioni OLAP. Due modelli di data mining, una cluster analysis e un albero di decisione, cercano le tendenze per fascia d'età e mese dell'anno.",
+    ],
+    role: "Progetto individuale.",
+    gallery: [
+      ["assets/db-logico.jpg", "Modello logico"],
+      ["assets/db-er.jpg", "Modello concettuale"],
+      ["assets/db-dwh.jpg", "Data warehouse"],
+    ],
+  },
+  {
+    id: "playence",
+    group: "uni",
+    kind: "Hackathon aziendale",
+    year: "1° posto",
+    foot: "In squadra, in quattro",
+    title: "Playence",
+    hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
+    cover: "phones",
+    tint: "#4a6ad8",
+    rare: true,
+    badge: "1° posto",
+    tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
+    story: [
+      "Il progetto ha vinto un hackathon aziendale. È una piattaforma che mette in contatto sportivi amatori e campioni per sessioni di allenamento esclusive.",
+      "Dopo l'evento, i dati del coach e dei dispositivi indossabili passano da un flusso n8n con l'AI, che restituisce un'analisi della performance. Il frontend è in Angular, il backend in ASP.NET Core con SQL Server.",
+      "Alla giuria abbiamo presentato anche il mercato, l'analisi SWOT e il modello di business, partendo da personas e scenari d'uso per tre profili di utente.",
+    ],
+    role: "Progettazione del flusso AI in n8n, architettura e presentazione, in un team di quattro persone.",
+    gallery: [
+      ["assets/playence-s1.jpg", "Dettaglio di un evento", true],
+      ["assets/playence-s2.jpg", "Analisi della performance", true],
+      ["assets/playence-s3.jpg", "Insight generati dall'AI", true],
+      ["assets/playence-s4.jpg", "Accesso", true],
+      ["assets/playence-arch.jpg", "Architettura e flusso n8n", true],
+      ["assets/playence-db.jpg", "Schema del database"],
+    ],
+  },
+  {
+    id: "dataware",
+    group: "uni",
+    kind: "Tesi di laurea",
+    year: "Università",
+    title: "Dataware",
+    foot: "Università, da solo",
+    hook: "La mia tesi. Un sistema che legge le privacy policy e spiega, criterio per criterio, quanto rischi accettandole.",
+    cover: "risk",
+    tint: "#2448b8",
+    rare: true,
+    tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
+    story: [
+      "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
+      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, non è andato oltre il modello più semplice.",
+      "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
+      "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
+    ],
+    role: "Progetto individuale, dalla ricerca al dataset, dai modelli di ML al prototipo RAG, fino al design dell'app e alla tesi.",
+    gallery: [
+      ["assets/dataware-landing.jpg", "«Ogni Accetto ha un prezzo»"],
+      ["assets/dataware-app1.jpg", "L'app: la community", true],
+      ["assets/dataware-app2.jpg", "L'app: la scheda di una piattaforma", true],
+      ["assets/dataware-analisi.jpg", "Analisi di una nuova policy"],
+      ["assets/dataware-dataset.jpg", "Estratto del dataset"],
+      ["assets/dataware-modelli.jpg", "Confronto tra i modelli"],
+      ["assets/dataware-confusion.jpg", "Matrice di confusione del modello finale"],
+    ],
+  },
+  {
     id: "agente",
     group: "lavoro",
     kind: "Agente AI",
@@ -99,113 +206,6 @@ const projects = [
     gallery: [
       ["assets/proforma-carta.jpg", "Il modello su carta"],
       ["assets/proforma-log.jpg", "Progettazione del registro"],
-    ],
-  },
-  {
-    id: "dataware",
-    group: "uni",
-    kind: "Tesi di laurea",
-    year: "Università",
-    title: "Dataware",
-    foot: "Università, da solo",
-    hook: "La mia tesi. Un sistema che legge le privacy policy e spiega, criterio per criterio, quanto rischi accettandole.",
-    cover: "risk",
-    tint: "#2448b8",
-    rare: true,
-    tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
-    story: [
-      "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
-      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, non è andato oltre il modello più semplice.",
-      "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
-      "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
-    ],
-    role: "Progetto individuale, dalla ricerca al dataset, dai modelli di ML al prototipo RAG, fino al design dell'app e alla tesi.",
-    gallery: [
-      ["assets/dataware-landing.jpg", "«Ogni Accetto ha un prezzo»"],
-      ["assets/dataware-app1.jpg", "L'app: la community", true],
-      ["assets/dataware-app2.jpg", "L'app: la scheda di una piattaforma", true],
-      ["assets/dataware-analisi.jpg", "Analisi di una nuova policy"],
-      ["assets/dataware-dataset.jpg", "Estratto del dataset"],
-      ["assets/dataware-modelli.jpg", "Confronto tra i modelli"],
-      ["assets/dataware-confusion.jpg", "Matrice di confusione del modello finale"],
-    ],
-  },
-  {
-    id: "playence",
-    group: "uni",
-    kind: "Hackathon aziendale",
-    year: "1° posto",
-    foot: "In squadra, in quattro",
-    title: "Playence",
-    hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
-    cover: "phones",
-    tint: "#4a6ad8",
-    rare: true,
-    badge: "1° posto",
-    tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
-    story: [
-      "Il progetto ha vinto un hackathon aziendale. È una piattaforma che mette in contatto sportivi amatori e campioni per sessioni di allenamento esclusive.",
-      "Dopo l'evento, i dati del coach e dei dispositivi indossabili passano da un flusso n8n con l'AI, che restituisce un'analisi della performance. Il frontend è in Angular, il backend in ASP.NET Core con SQL Server.",
-      "Alla giuria abbiamo presentato anche il mercato, l'analisi SWOT e il modello di business, partendo da personas e scenari d'uso per tre profili di utente.",
-    ],
-    role: "Progettazione del flusso AI in n8n, architettura e presentazione, in un team di quattro persone.",
-    gallery: [
-      ["assets/playence-s1.jpg", "Dettaglio di un evento", true],
-      ["assets/playence-s2.jpg", "Analisi della performance", true],
-      ["assets/playence-s3.jpg", "Insight generati dall'AI", true],
-      ["assets/playence-s4.jpg", "Accesso", true],
-      ["assets/playence-arch.jpg", "Architettura e flusso n8n", true],
-      ["assets/playence-db.jpg", "Schema del database"],
-    ],
-  },
-  {
-    id: "gufy",
-    group: "uni",
-    kind: "Design di un'app",
-    year: "Università",
-    title: "Gufy",
-    foot: "Università, in coppia",
-    hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
-    cover: "gufy",
-    tint: "#5671d0",
-    tags: ["UX research", "Personas", "Storyboard", "Figma"],
-    story: [
-      "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
-      "Dalle risposte al questionario sono nati personas, scenari e requisiti. Su quella base abbiamo costruito il modello concettuale, gli user flow e lo storyboard.",
-      "L'interfaccia chiede pochissima attenzione, perché chi la usa è spesso stanco.",
-    ],
-    role: "Ricerca utente, progettazione dell'interazione e prototipazione.",
-    gallery: [
-      ["assets/gufy-owl.jpg", "La mascotte"],
-      ["assets/gufy-app1.jpg", "Benvenuto", true],
-      ["assets/gufy-app2.jpg", "Inserimento del viaggio", true],
-      ["assets/gufy-app3.jpg", "Anticipo della sveglia", true],
-      ["assets/gufy-app4.jpg", "Pronto: ora puoi riposare", true],
-      ["assets/gufy-story1.jpg", "Storyboard: si parte"],
-      ["assets/gufy-story2.jpg", "Storyboard: ti sveglio io"],
-      ["assets/gufy-pod.jpg", "Il GufyPod", true],
-    ],
-  },
-  {
-    id: "db",
-    group: "uni",
-    kind: "Database e analisi",
-    year: "Università",
-    title: "Streaming musicale",
-    foot: "Università, da solo",
-    hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
-    cover: "schema",
-    tint: "#3b4a7d",
-    tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
-    story: [
-      "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
-      "Sopra c'è un data warehouse a fiocco di neve per analizzare gli ascolti con le operazioni OLAP. Due modelli di data mining, una cluster analysis e un albero di decisione, cercano le tendenze per fascia d'età e mese dell'anno.",
-    ],
-    role: "Progetto individuale.",
-    gallery: [
-      ["assets/db-logico.jpg", "Modello logico"],
-      ["assets/db-er.jpg", "Modello concettuale"],
-      ["assets/db-dwh.jpg", "Data warehouse"],
     ],
   },
 ];
@@ -424,49 +424,39 @@ document.addEventListener("pointerout", (e) => {
   }
 });
 
-// ---------- Collezione: filtri, album e mazzo ----------
-const album = document.getElementById("album");
+// ---------- Apertura: due lavori in azienda, affiancati ----------
+// sono le stesse figurine della collezione: un clic apre il progetto
+const heroCards = document.getElementById("hero-cards");
+heroCards.innerHTML = ["agente", "campo"].map((id, i) => cardHTML(projects.find((p) => p.id === id), i, true)).join("");
+fitCovers(heroCards);
+
+// ---------- La mia storia: le figurine dentro ogni tappa, oppure tutte nel mazzo ----------
+const chapters = document.getElementById("chapters");
 const deck = document.getElementById("deck");
 const stage = document.getElementById("deck-stage");
 const deckCount = document.getElementById("deck-count");
-const filtersEl = document.getElementById("filters");
 const viewsEl = document.getElementById("views");
-let filter = "all";
-let view = "album";
+let view = "racconto";
 let active = 0;
-let list = projects;
 
-filtersEl.querySelectorAll("button").forEach((b) => {
-  const f = b.dataset.filter;
-  b.querySelector("sup").textContent = f === "all" ? projects.length : projects.filter((p) => p.group === f).length;
-});
-
-function render(first) {
-  list = filter === "all" ? projects : projects.filter((p) => p.group === filter);
-  album.innerHTML = list.map((p, i) => cardHTML(p, i, false)).join("");
-  stage.innerHTML = list.map((p, i) => cardHTML(p, i, true)).join("");
-  fitCovers(album);
+function render() {
+  chapters.querySelectorAll(".chapter-cards").forEach((box) => {
+    box.innerHTML = box.dataset.ids.split(",").map((id, i) => cardHTML(projects.find((p) => p.id === id), i, false)).join("");
+    fitCovers(box);
+    glueLastWord(box);
+  });
+  stage.innerHTML = projects.map((p, i) => cardHTML(p, i, true)).join("");
   fitCovers(stage);
-  active = Math.min(active, list.length - 1);
   layoutDeck();
-  glueLastWord(album);
 }
 
 function setPressed(group, attr, value) {
   group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset[attr] === value));
 }
-filtersEl.addEventListener("click", (e) => {
-  const b = e.target.closest("button");
-  if (!b || b.dataset.filter === filter) return;
-  filter = b.dataset.filter;
-  setPressed(filtersEl, "filter", filter);
-  active = 0;
-  render(false);
-});
 function setView(v) {
   view = v;
   setPressed(viewsEl, "view", v);
-  album.hidden = v !== "album";
+  chapters.hidden = v !== "racconto";
   deck.hidden = v !== "mazzo";
   if (v === "mazzo") requestAnimationFrame(layoutDeck);
   try { localStorage.setItem("portfolio-view", v); } catch {}
@@ -545,10 +535,10 @@ stage.addEventListener("wheel", (e) => {
   if (Math.abs(wheelAcc) > 60) { go(active + Math.sign(wheelAcc)); wheelAcc = 0; }
 }, { passive: false });
 
-let savedView = "album";
-try { savedView = localStorage.getItem("portfolio-view") || "album"; } catch {}
-render(true);
-setView(savedView === "mazzo" ? "mazzo" : "album");
+let savedView = "racconto";
+try { savedView = localStorage.getItem("portfolio-view") || "racconto"; } catch {}
+render();
+setView(savedView === "mazzo" ? "mazzo" : "racconto");
 
 // ---------- Modale di dettaglio ----------
 const modal = document.getElementById("modal");

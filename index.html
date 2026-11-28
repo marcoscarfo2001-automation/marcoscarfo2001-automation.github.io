@@ -17,22 +17,22 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/fonts/sofia-sans-extra-condensed.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/sofia-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=27">
+  <link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
     <header class="topbar">
     <a href="#top" class="brand">Marco Scarfò</a>
     <nav>
-      <a href="#progetti">Progetti</a>
+      <a href="#storia">La mia storia</a>
       <a href="#metodo">Metodo</a>
-      <a href="#dataware">Dataware</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- APERTURA: chi sono, in due righe, con le azioni subito in vista -->
+    <!-- APERTURA: chi sono, con due progetti di lavoro accanto -->
     <section class="hero">
+      <div>
       <h1 class="reveal">Marco Scarfò</h1>
       <div class="hero-side reveal">
         <p class="hero-role">Software e AI developer</p>
@@ -41,42 +41,141 @@
           In azienda costruisco automazioni e software che usano l'AI.
         </p>
         <div class="hero-cta">
-          <a class="btn btn-solid" href="#progetti">Sfoglia la collezione</a>
+          <a class="btn btn-solid" href="#storia">Leggi la mia storia</a>
           <a class="text-link" href="#contatti">Scrivimi</a>
         </div>
       </div>
+      </div>
+      <div class="hero-cards" id="hero-cards" aria-label="Due progetti di lavoro, aprili con un clic"></div>
     </section>
 
-    <!-- PROGETTI: la collezione di figurine -->
-    <section id="progetti" class="collection">
-      <div class="collection-head">
+    <!-- LA MIA STORIA: le tappe in ordine, ognuna con i suoi progetti -->
+    <section id="storia" class="story">
+      <div class="story-head">
         <div>
-          <h2 class="sec-title">La collezione</h2>
-          <p class="collection-sub">
-            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
-            Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
+          <h2 class="sec-title">La mia storia</h2>
+          <p class="story-sub">
+            Dall'università al lavoro in azienda, con i progetti fatti lungo la strada. Ogni progetto è una figurina:
+            aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
           </p>
         </div>
-        <div class="collection-controls">
-          <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
-            <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
-            <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
-            <button type="button" data-filter="uni" aria-pressed="false">Università e personali <sup></sup></button>
-          </div>
           <div class="seg" role="group" aria-label="Cambia vista" id="views">
-            <button type="button" data-view="album" aria-pressed="true">
+            <button type="button" data-view="racconto" aria-pressed="true">
               <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.2"/></svg>
-              Album
+              Racconto
             </button>
             <button type="button" data-view="mazzo" aria-pressed="false">
               <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="2" width="7" height="11" rx="1.4" transform="rotate(-14 8 8)"/><rect x="4.5" y="2.5" width="7" height="11" rx="1.4" transform="rotate(10 8 8)"/></svg>
               Mazzo
             </button>
           </div>
+      </div>
+
+      <div class="chapters" id="chapters">
+        <article class="chapter" id="universita">
+          <div class="chapter-text">
+            <p class="chapter-when">All'università</p>
+            <h3>Un percorso ibrido</h3>
+            <p>
+              La triennale in ICT è un percorso in cui l'informatica si studia accanto a sociologia, diritto e comunicazione.
+              Mi ha insegnato a progettare un sistema partendo dalle esigenze delle persone che lo&nbsp;useranno.
+            </p>
+          </div>
+          <div class="chapter-cards" data-ids="gufy,db,playence"></div>
+        </article>
+
+        <article class="chapter chapter-thesis" id="dataware">
+      <div class="feature-card">
+      <img class="feature-mark" src="assets/dataware-logo.png" alt="" aria-hidden="true">
+      <div class="feature-head">
+        <div>
+          <p class="feature-kicker">La tesi</p>
+          <h2>Dataware</h2>
+          <p class="feature-lede">
+            «Accetto i termini e le condizioni» è stata definita la bugia più grande di Internet.
+            Dataware legge privacy policy e termini di servizio al posto tuo e ti spiega, criterio per criterio, cosa stai accettando.
+          </p>
         </div>
       </div>
 
-      <div class="album" id="album"></div>
+      <div class="feature-grid">
+        <!-- Scala del rischio interattiva -->
+        <div class="scale-card">
+          <p class="scale-title">Scegli una piattaforma</p>
+          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio), quindi la somma dei dieci va da 10 a 50.</p>
+          <div class="platforms" id="platforms" role="tablist" aria-label="Piattaforme"></div>
+
+          <div class="scale-readout" aria-live="polite">
+            <div class="scale-score"><span id="score-n">39</span><small>/50</small></div>
+            <div>
+              <p class="scale-class" id="score-class"></p>
+              <p class="scale-note" id="score-note"></p>
+            </div>
+          </div>
+
+          <div class="scale">
+            <div class="scale-bands">
+              <span style="--from:10;--to:18">Minimal</span>
+              <span style="--from:19;--to:26">Low</span>
+              <span style="--from:27;--to:34">Moderate</span>
+              <span style="--from:35;--to:42">Significant</span>
+              <span style="--from:43;--to:50">Critical</span>
+            </div>
+            <div class="scale-marker" id="marker"></div>
+            <div class="scale-ticks"><span>10, massima tutela</span><span>50, massimo rischio</span></div>
+          </div>
+
+          <div class="criteria" id="criteria"></div>
+        </div>
+
+        <!-- Il racconto della tesi, in prosa -->
+        <div class="feature-story">
+          <h3>Sessanta piattaforme lette a mano</h3>
+          <p>
+            Una raccolta di privacy policy classificate per rischio non esisteva, quindi l'ho costruita io,
+            valutando ogni piattaforma su dieci criteri presi dal GDPR. Il prototipo RAG parte da quelle valutazioni
+            e, su dieci piattaforme mai viste, ha indovinato la classe di rischio in nove casi.
+          </p>
+          <button class="feature-open" data-open="dataware">Apri la scheda della tesi</button>
+        </div>
+      </div>
+      </div>
+        </article>
+
+        <article class="chapter" id="azienda">
+          <div class="chapter-text">
+            <p class="chapter-when">In azienda</p>
+            <h3>Automazioni e software per chi lavora ogni giorno</h3>
+            <p>
+              In azienda porto questo modo di lavorare nei processi di tutti i giorni, dalle ore dei tecnici in cantiere alle fatture.
+              Il punto di partenza è sempre come si lavora oggi, per capire cosa si può semplificare.
+            </p>
+          </div>
+          <div class="chapter-cards" data-ids="agente,corsi,campo,proforma"></div>
+        </article>
+
+        <article class="chapter chapter-now" id="oggi">
+          <div class="chapter-text">
+            <p class="chapter-when">Oggi</p>
+            <h3>La magistrale in Intelligenza Artificiale</h3>
+            <p>
+              Con la magistrale sto rafforzando la parte tecnica, per arrivare a guidare l'innovazione
+              senza perdere di vista gli aspetti umani ed etici.
+            </p>
+          </div>
+          <div class="chapter-tools">
+            <h4>Con cosa lavoro</h4>
+            <p>
+              Per le automazioni uso soprattutto n8n, collegato ai gestionali con API e webhook.
+              Il codice lo scrivo in JavaScript, Python, PHP e SQL.
+            </p>
+            <p>
+              Sul lato AI lavoro con i modelli di OpenAI, Whisper per la voce e la RAG quando un modello
+              deve rispondere su dati aziendali. Le interfacce le disegno prima a carta e penna, e solo dopo in Figma.
+            </p>
+          </div>
+        </article>
+      </div>
 
       <div class="deck" id="deck" hidden>
         <div class="deck-stage" id="deck-stage" tabindex="0" role="region" aria-roledescription="mazzo di carte" aria-label="Progetti, una carta alla volta"></div>
@@ -86,32 +185,6 @@
           <button type="button" class="deck-btn" id="deck-next" aria-label="Carta successiva">→</button>
         </div>
         <p class="deck-hint">Trascina le carte o usa le frecce, poi fai clic su quella in primo piano per aprirla.</p>
-      </div>
-    </section>
-
-    <!-- PROFILO -->
-    <section id="profilo" class="about">
-      <div>
-        <p class="about-big">
-          La triennale in ICT è un percorso ibrido, in cui l'informatica si studia accanto a sociologia,
-          diritto e comunicazione. Mi ha insegnato a progettare un sistema partendo dalle esigenze delle persone che lo&nbsp;useranno.
-        </p>
-        <p class="about-more">
-          Con la magistrale in Intelligenza Artificiale sto rafforzando la parte tecnica, per arrivare a guidare
-          l'innovazione senza perdere di vista gli aspetti umani ed etici. In azienda porto già questo modo di lavorare
-          nei processi di tutti i giorni, dalle ore dei tecnici in cantiere alle fatture.
-        </p>
-      </div>
-      <div class="about-side">
-        <h2 class="side-title">Con cosa lavoro</h2>
-        <p>
-          Per le automazioni uso soprattutto n8n, collegato ai gestionali con API e webhook.
-          Il codice lo scrivo in JavaScript, Python, PHP e SQL.
-        </p>
-        <p>
-          Sul lato AI lavoro con i modelli di OpenAI, Whisper per la voce e la RAG quando un modello
-          deve rispondere su dati aziendali. Le interfacce le disegno prima a carta e penna, e solo dopo in Figma.
-        </p>
       </div>
     </section>
 
@@ -174,65 +247,6 @@
       </div>
     </section>
 
-    <!-- DATAWARE: un progetto da vicino, dentro una card blu -->
-    <section id="dataware" class="feature">
-      <div class="feature-card">
-      <img class="feature-mark" src="assets/dataware-logo.png" alt="" aria-hidden="true">
-      <div class="feature-head">
-        <div>
-          <p class="feature-kicker">Un progetto da vicino, la mia tesi di laurea</p>
-          <h2>Dataware</h2>
-          <p class="feature-lede">
-            «Accetto i termini e le condizioni» è stata definita la bugia più grande di Internet.
-            Dataware legge privacy policy e termini di servizio al posto tuo e ti spiega, criterio per criterio, cosa stai accettando.
-          </p>
-        </div>
-      </div>
-
-      <div class="feature-grid">
-        <!-- Scala del rischio interattiva -->
-        <div class="scale-card">
-          <p class="scale-title">Scegli una piattaforma</p>
-          <p class="scale-help">Ogni criterio vale da 1 (dati tutelati) a 5 (dati a rischio), quindi la somma dei dieci va da 10 a 50.</p>
-          <div class="platforms" id="platforms" role="tablist" aria-label="Piattaforme"></div>
-
-          <div class="scale-readout" aria-live="polite">
-            <div class="scale-score"><span id="score-n">39</span><small>/50</small></div>
-            <div>
-              <p class="scale-class" id="score-class"></p>
-              <p class="scale-note" id="score-note"></p>
-            </div>
-          </div>
-
-          <div class="scale">
-            <div class="scale-bands">
-              <span style="--from:10;--to:18">Minimal</span>
-              <span style="--from:19;--to:26">Low</span>
-              <span style="--from:27;--to:34">Moderate</span>
-              <span style="--from:35;--to:42">Significant</span>
-              <span style="--from:43;--to:50">Critical</span>
-            </div>
-            <div class="scale-marker" id="marker"></div>
-            <div class="scale-ticks"><span>10, massima tutela</span><span>50, massimo rischio</span></div>
-          </div>
-
-          <div class="criteria" id="criteria"></div>
-        </div>
-
-        <!-- Il racconto della tesi, in prosa -->
-        <div class="feature-story">
-          <h3>Sessanta piattaforme lette a mano</h3>
-          <p>
-            Una raccolta di privacy policy classificate per rischio non esisteva, quindi l'ho costruita io,
-            valutando ogni piattaforma su dieci criteri presi dal GDPR. Il prototipo RAG parte da quelle valutazioni
-            e, su dieci piattaforme mai viste, ha indovinato la classe di rischio in nove casi.
-          </p>
-          <button class="feature-open" data-open="dataware">Apri la scheda della tesi</button>
-        </div>
-      </div>
-      </div>
-    </section>
-
     <!-- CONTATTI -->
     <section id="contatti" class="contact">
       <h2>Hai un'idea o un processo<br class="br-lg"> da semplificare?</h2>
@@ -266,6 +280,6 @@
     <button class="lb-btn lb-next" data-lb="1" aria-label="Immagine successiva">→</button>
   </dialog>
 
-  <script src="app.js?v=18"></script>
+  <script src="app.js?v=20"></script>
 </body>
 </html>
