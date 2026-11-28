@@ -1,0 +1,33 @@
+URL: https://leerob.com/
+Titolo: Lee Robinson
+Altezza pagina: 1220px
+
+font-family body: "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+font-family h1: "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+font-family h2: "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+font-family p: "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+font-family link principali:
+  @leerob -> "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+  Cursor -> "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+  Vercel -> "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+  angel invest -> "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+  Things I believe -> "Iowan Old Style Local", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
+
+Sfondo body: rgb(255, 255, 255) (html: rgb(255, 255, 255))
+Colore testo body: rgb(40, 40, 40)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  main.site-shell: rgba(0, 0, 0, 0)
+  article.content-frame: rgba(0, 0, 0, 0)
+  div.home-layout: rgba(0, 0, 0, 0)
+  div.home-copy: rgba(0, 0, 0, 0)
+  section.bio-section: rgba(0, 0, 0, 0)
+  div.writing-index: rgba(0, 0, 0, 0)
+  section: rgba(0, 0, 0, 0)
+  section: rgba(0, 0, 0, 0)
+  div.blogs-list: rgba(0, 0, 0, 0)
+  g: rgba(0, 0, 0, 0)
+
+Contenuto principale: <main> larghezza reale 1430px
+max-width trovati:
+  nessuno (max-width: none)

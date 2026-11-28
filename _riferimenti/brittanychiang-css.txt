@@ -1,0 +1,33 @@
+URL: https://brittanychiang.com/
+Titolo: Brittany Chiang
+Altezza pagina: 3860px
+
+font-family body: "Times New Roman"
+font-family h1: __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+font-family h2: __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+font-family p: __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+font-family link principali:
+  Skip to Content -> __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  Brittany Chiang -> __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  About -> __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  Experience -> __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  Projects -> __inter_20b187, __inter_Fallback_20b187, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+Sfondo body: rgb(15, 23, 42) (html: rgba(0, 0, 0, 0))
+Colore testo body: rgb(148, 163, 184)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  div#__next: rgba(0, 0, 0, 0)
+  div.__variable_20b187.group/spotlight: rgba(0, 0, 0, 0)
+  div.pointer-events-none.fixed: rgba(0, 0, 0, 0)
+  div.mx-auto.min-h-screen: rgba(0, 0, 0, 0)
+  div.lg:flex.lg:justify-between: rgba(0, 0, 0, 0)
+  main#content.pt-24.lg:w-[52%]: rgba(0, 0, 0, 0)
+  div: rgba(0, 0, 0, 0)
+  section#about.mb-16.scroll-mt-16: rgba(0, 0, 0, 0)
+  div: rgba(0, 0, 0, 0)
+  section#experience.mb-16.scroll-mt-16: rgba(0, 0, 0, 0)
+
+Contenuto principale: <main> larghezza reale 607px
+max-width trovati:
+  footer: max-width 448px (larghezza reale 448px)

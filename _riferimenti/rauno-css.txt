@@ -1,0 +1,33 @@
+URL: https://rauno.me/
+Titolo: Rauno Freiberg
+Altezza pagina: 6108px
+
+font-family body: X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+font-family h1: X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+font-family h2: (assente)
+font-family p: X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+font-family link principali:
+  Devouring DetailsDD -> X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  CraftCraft -> X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  History of Software Design -> X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  ProjectsProjects -> X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  Field Notes -> X, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+
+Sfondo body: rgb(237, 237, 237) (html: rgb(237, 237, 237))
+Colore testo body: rgb(0, 0, 0)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  div#__next: rgba(0, 0, 0, 0)
+  main.index_root__qDg6t: rgba(0, 0, 0, 0)
+  div.index_ghost__Z6J_6: rgba(0, 0, 0, 0)
+  div.index_center__dvDjE.scrollable-content: rgba(0, 0, 0, 0)
+  div.index_frames__d9hw4: rgba(0, 0, 0, 0)
+  div.index_mainContainer__XY5Vr: rgba(0, 0, 0, 0)
+  div.index_frame__XKrH1: rgba(0, 0, 0, 0)
+  div.c-lesPJm.c-lesPJm-iljNlPj-css: rgb(255, 255, 255)
+  div.c-lesPJm.c-lesPJm-ifOgKdU-css: rgb(255, 255, 2)
+  h1.c-lesPJm.c-lesPJm-icmpvrW-css: rgba(0, 0, 0, 0)
+
+Contenuto principale: <main> larghezza reale 1440px
+max-width trovati:
+  nessuno (max-width: none)

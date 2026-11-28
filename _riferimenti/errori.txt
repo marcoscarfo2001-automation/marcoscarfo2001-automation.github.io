@@ -1,1 +1,2 @@
-linear (https://linear.app/): la pagina HTML si carica, ma i fogli di stile e le immagini vengono da static.linear.app e webassets.linear.app, che la policy di rete di questo ambiente cloud blocca (net::ERR_TUNNEL_CONNECTION_FAILED). La pagina appariva senza stile (testo Times New Roman su fondo scuro), quindi screenshot e valori CSS non erano utilizzabili e non sono stati salvati.
+Nessun errore: tutti i siti caricati con stile.
+Nota: rauno.me usa una griglia a scorrimento interno/orizzontale; la cattura fullPage mostra la pagina come appare (riquadri in alto, sfondo grigio sotto), non tutte le sezioni.

@@ -1,0 +1,33 @@
+URL: https://www.joshwcomeau.com/
+Titolo: Josh W. Comeau
+Altezza pagina: 4473px
+
+font-family body: Wotfard, Wotfard-fallback, sans-serif
+font-family h1: Wotfard, Wotfard-fallback, sans-serif
+font-family h2: Wotfard, Wotfard-fallback, sans-serif
+font-family p: Wotfard, Wotfard-fallback, sans-serif
+font-family link principali:
+  Skip to content -> Wotfard, Wotfard-fallback, sans-serif
+  JoshWComeau -> Wotfard, Wotfard-fallback, sans-serif
+  About -> Wotfard, Wotfard-fallback, sans-serif
+  RSS Feed -> Wotfard, Wotfard-fallback, sans-serif
+   -> Wotfard, Wotfard-fallback, sans-serif
+
+Sfondo body: rgba(0, 0, 0, 0) (html: rgb(160, 212, 238))
+Colore testo body: rgb(10, 12, 16)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  div.a17ksbvo: rgba(0, 0, 0, 0)
+  div.w1tujqyh: rgb(255, 255, 255)
+  div: rgba(0, 0, 0, 0)
+  div.w180az57: rgb(160, 212, 238)
+  div.b17wfnta.wrmemhr: rgba(0, 0, 0, 0)
+  svg: rgba(0, 0, 0, 0)
+  path: rgba(0, 0, 0, 0)
+  path: rgba(0, 0, 0, 0)
+  div.f19h6ry9.wrmemhr: rgba(0, 0, 0, 0)
+  svg: rgba(0, 0, 0, 0)
+
+Contenuto principale: <article> larghezza reale 627px
+max-width trovati:
+  nessuno (max-width: none)

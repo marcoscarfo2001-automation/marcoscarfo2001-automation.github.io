@@ -1,0 +1,31 @@
+URL: https://paco.me/
+Titolo: Paco Coursey
+Altezza pagina: 1424px
+
+font-family body: Sohne, Inter, system-ui, sans-serif
+font-family h1: Inter, system-ui, sans-serif
+font-family h2: Sohne, Inter, system-ui, sans-serif
+font-family p: Sohne, Inter, system-ui, sans-serif
+font-family link principali:
+  Linear -> Sohne, Inter, system-ui, sans-serif
+  Vercel -> Sohne, Inter, system-ui, sans-serif
+  Craft -> Sohne, Inter, system-ui, sans-serif
+  ⌘K -> Sohne, Inter, system-ui, sans-serif
+  Writer -> Sohne, Inter, system-ui, sans-serif
+
+Sfondo body: rgb(255, 255, 255) (html: rgb(255, 255, 255))
+Colore testo body: rgb(0, 0, 0)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  div#__next: rgba(0, 0, 0, 0)
+  main: rgba(0, 0, 0, 0)
+  div.main-grid: rgba(0, 0, 0, 0)
+  article: rgba(0, 0, 0, 0)
+  div: rgba(0, 0, 0, 0)
+  div.stack: rgba(0, 0, 0, 0)
+  div: rgba(0, 0, 0, 0)
+
+Contenuto principale: <main> larghezza reale 1072px
+max-width trovati:
+  main: max-width 1072px (larghezza reale 1072px)
+  article: max-width 640px (larghezza reale 640px)

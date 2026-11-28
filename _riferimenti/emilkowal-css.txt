@@ -1,0 +1,29 @@
+URL: https://emilkowal.ski/
+Titolo: Emil Kowalski
+Altezza pagina: 1854px
+
+font-family body: Sans, "Sans Fallback"
+font-family h1: (assente)
+font-family h2: (assente)
+font-family p: Sans, "Sans Fallback"
+font-family link principali:
+  Enrollment for my animation co -> Sans, "Sans Fallback"
+  Emil Kowalski -> Sans, "Sans Fallback"
+  aiforui.devAI for Designers an -> Sans, "Sans Fallback"
+  SonnerAn opinionated toast com -> Sans, "Sans Fallback"
+  animations.devA course on web  -> Sans, "Sans Fallback"
+
+Sfondo body: rgb(253, 253, 252) (html: rgba(0, 0, 0, 0))
+Colore testo body: rgb(0, 0, 0)
+
+Sfondo primi 10 blocchi grandi (>=600x200 px):
+  div.root.layout-root: rgba(0, 0, 0, 0)
+  main: rgba(0, 0, 0, 0)
+  div.-mb-3.mt-16: rgba(0, 0, 0, 0)
+  div.flex.flex-col: rgba(0, 0, 0, 0)
+  div.-mb-3.mt-16: rgba(0, 0, 0, 0)
+  div.flex.flex-col: rgba(0, 0, 0, 0)
+
+Contenuto principale: <main> larghezza reale 644px
+max-width trovati:
+  nessuno (max-width: none)
