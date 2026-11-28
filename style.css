@@ -2,8 +2,8 @@
 /* Una sola famiglia di colore: il blu, dal grigio lavagna appena azzurrato al blu notte.
    Riferimento: le copie cianografiche dei progetti (disegni stampati in un solo blu) e le lavagne scritte a pennarello. */
 :root {
-  --bg: #eceef3;            /* lavagna, appena azzurrata */
-  --surface: #f7f8fb;       /* foglio */
+  --bg: #f3f5f9;            /* fondo chiaro, appena azzurrato */
+  --surface: #ffffff;       /* foglio */
   --ink: #151b2f;           /* inchiostro blu-nero */
   --muted: #596075;         /* inchiostro chiaro */
   --line: rgba(21, 27, 47, 0.12);
@@ -63,7 +63,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 56px; }
 body {
   margin: 0;
   background-color: var(--bg);
-  background-image: var(--tx-grain);
   color: var(--ink);
   font-family: var(--sans);
   font-size: var(--t-m);
@@ -71,8 +70,6 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-/* macchie larghe della carta: un solo foglio fermo dietro la pagina, così non si vedono giunte */
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: var(--tx-mottle) center / cover no-repeat; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 em { font-style: normal; }
@@ -105,7 +102,7 @@ figcaption { font-size: 15px; line-height: 1.4; color: var(--muted); }
   position: sticky; top: 0; z-index: 50; height: 56px;
   display: flex; justify-content: space-between; align-items: center;
   padding: 0 var(--pad-x);
-  background-color: var(--bg); background-image: var(--tx-grain);
+  background-color: color-mix(in srgb, var(--bg) 94%, transparent);
   border-bottom: 1px solid var(--line);
 }
 .brand { font-family: var(--display); font-size: 22px; text-decoration: none; }
@@ -114,15 +111,12 @@ figcaption { font-size: 15px; line-height: 1.4; color: var(--muted); }
 .topbar nav a:hover { color: var(--ink); }
 
 /* ---------- Apertura ---------- */
-/* il nome a sinistra, la presentazione e le azioni a destra, allineati in basso: tutto entra nei primi 600 px */
-.hero {
-  padding: var(--s5) var(--pad-x) var(--s4);
-  min-height: 0;
-  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--s3) var(--s5); align-items: end;
-}
-.hero h1 { font-family: var(--display); font-size: var(--t-name); line-height: .86; letter-spacing: -0.02em; }
+/* una colonna: nome, ruolo, due righe e le azioni, tutto nei primi 600 px */
+.hero { padding: var(--s5) var(--pad-x) 0; }
+.hero h1 { font-family: var(--display); font-size: var(--t-name); line-height: .9; letter-spacing: -0.02em; }
+.hero-side { max-width: 640px; margin-top: var(--s3); }
 .hero-role { margin: 0; font-size: var(--t-l); font-weight: 600; }
-.lede { max-width: 32em; margin: var(--s1) 0 0; font-size: var(--t-m); color: var(--muted); }
+.lede { max-width: 34em; margin: var(--s1) 0 0; font-size: var(--t-m); color: var(--muted); }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); margin-top: var(--s3); }
 
 /* ---------- Profilo ---------- */
@@ -201,7 +195,7 @@ figcaption { font-size: 15px; line-height: 1.4; color: var(--muted); }
   --rx: 0deg; --ry: 0deg; --lift: 0px;
   position: relative; display: flex; flex-direction: column; height: 100%;
   padding: 10px; border-radius: var(--r-card); overflow: hidden;
-  background-color: #dde2ee; background-image: var(--tx-grain);
+  background-color: #e3e8f2;
   box-shadow: 0 0 0 1px var(--line), var(--sh-1);
   transform: translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform .6s var(--ease), box-shadow .5s var(--ease);
@@ -477,7 +471,7 @@ figcaption { font-size: 15px; line-height: 1.4; color: var(--muted); }
 .modal {
   width: min(1100px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
   padding: 0; border: 1px solid var(--line); border-radius: var(--r);
-  background-color: var(--surface); background-image: var(--tx-grain); color: var(--ink); overflow: hidden;
+  background-color: var(--surface); color: var(--ink); overflow: hidden;
 }
 .modal[open] { animation: pop .45s var(--ease); }
 .modal::backdrop { background: rgba(12, 16, 34, .72); }
@@ -575,7 +569,7 @@ figcaption { font-size: 15px; line-height: 1.4; color: var(--muted); }
 }
 @media (max-width: 900px) {
   .album { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hero { grid-template-columns: 1fr; padding-top: var(--s4); }
+  .hero { padding-top: var(--s4); }
 }
 }
 @media (max-width: 760px) {
