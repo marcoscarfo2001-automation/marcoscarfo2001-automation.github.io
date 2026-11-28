@@ -4,113 +4,6 @@
 // gallery: [immagine, didascalia, sfondo scuro?]
 const projects = [
   {
-    id: "gufy",
-    group: "uni",
-    kind: "Design di un'app",
-    year: "Università",
-    title: "Gufy",
-    foot: "Università, in coppia",
-    hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
-    cover: "gufy",
-    tint: "#5671d0",
-    tags: ["UX research", "Personas", "Storyboard", "Figma"],
-    story: [
-      "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
-      "Dalle risposte al questionario sono nati personas, scenari e requisiti. Su quella base abbiamo costruito il modello concettuale, gli user flow e lo storyboard.",
-      "L'interfaccia chiede pochissima attenzione, perché chi la usa è spesso stanco.",
-    ],
-    role: "Ricerca utente, progettazione dell'interazione e prototipazione.",
-    gallery: [
-      ["assets/gufy-owl.jpg", "La mascotte"],
-      ["assets/gufy-app1.jpg", "Benvenuto", true],
-      ["assets/gufy-app2.jpg", "Inserimento del viaggio", true],
-      ["assets/gufy-app3.jpg", "Anticipo della sveglia", true],
-      ["assets/gufy-app4.jpg", "Pronto: ora puoi riposare", true],
-      ["assets/gufy-story1.jpg", "Storyboard: si parte"],
-      ["assets/gufy-story2.jpg", "Storyboard: ti sveglio io"],
-      ["assets/gufy-pod.jpg", "Il GufyPod", true],
-    ],
-  },
-  {
-    id: "db",
-    group: "uni",
-    kind: "Database e analisi",
-    year: "Università",
-    title: "Streaming musicale",
-    foot: "Università, da solo",
-    hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
-    cover: "schema",
-    tint: "#3b4a7d",
-    tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
-    story: [
-      "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
-      "Sopra c'è un data warehouse a fiocco di neve per analizzare gli ascolti con le operazioni OLAP. Due modelli di data mining, una cluster analysis e un albero di decisione, cercano le tendenze per fascia d'età e mese dell'anno.",
-    ],
-    role: "Progetto individuale.",
-    gallery: [
-      ["assets/db-logico.jpg", "Modello logico"],
-      ["assets/db-er.jpg", "Modello concettuale"],
-      ["assets/db-dwh.jpg", "Data warehouse"],
-    ],
-  },
-  {
-    id: "playence",
-    group: "uni",
-    kind: "Hackathon aziendale",
-    year: "1° posto",
-    foot: "In squadra, in quattro",
-    title: "Playence",
-    hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
-    cover: "phones",
-    tint: "#4a6ad8",
-    rare: true,
-    badge: "1° posto",
-    tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
-    story: [
-      "Il progetto ha vinto un hackathon aziendale. È una piattaforma che mette in contatto sportivi amatori e campioni per sessioni di allenamento esclusive.",
-      "Dopo l'evento, i dati del coach e dei dispositivi indossabili passano da un flusso n8n con l'AI, che restituisce un'analisi della performance. Il frontend è in Angular, il backend in ASP.NET Core con SQL Server.",
-      "Alla giuria abbiamo presentato anche il mercato, l'analisi SWOT e il modello di business, partendo da personas e scenari d'uso per tre profili di utente.",
-    ],
-    role: "Progettazione del flusso AI in n8n, architettura e presentazione, in un team di quattro persone.",
-    gallery: [
-      ["assets/playence-s1.jpg", "Dettaglio di un evento", true],
-      ["assets/playence-s2.jpg", "Analisi della performance", true],
-      ["assets/playence-s3.jpg", "Insight generati dall'AI", true],
-      ["assets/playence-s4.jpg", "Accesso", true],
-      ["assets/playence-arch.jpg", "Architettura e flusso n8n", true],
-      ["assets/playence-db.jpg", "Schema del database"],
-    ],
-  },
-  {
-    id: "dataware",
-    group: "uni",
-    kind: "Tesi di laurea",
-    year: "Università",
-    title: "Dataware",
-    foot: "Università, da solo",
-    hook: "La mia tesi. Un sistema che legge le privacy policy e spiega, criterio per criterio, quanto rischi accettandole.",
-    cover: "risk",
-    tint: "#2448b8",
-    rare: true,
-    tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
-    story: [
-      "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
-      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, non è andato oltre il modello più semplice.",
-      "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
-      "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
-    ],
-    role: "Progetto individuale, dalla ricerca al dataset, dai modelli di ML al prototipo RAG, fino al design dell'app e alla tesi.",
-    gallery: [
-      ["assets/dataware-landing.jpg", "«Ogni Accetto ha un prezzo»"],
-      ["assets/dataware-app1.jpg", "L'app: la community", true],
-      ["assets/dataware-app2.jpg", "L'app: la scheda di una piattaforma", true],
-      ["assets/dataware-analisi.jpg", "Analisi di una nuova policy"],
-      ["assets/dataware-dataset.jpg", "Estratto del dataset"],
-      ["assets/dataware-modelli.jpg", "Confronto tra i modelli"],
-      ["assets/dataware-confusion.jpg", "Matrice di confusione del modello finale"],
-    ],
-  },
-  {
     id: "agente",
     group: "lavoro",
     kind: "Agente AI",
@@ -208,6 +101,113 @@ const projects = [
       ["assets/proforma-log.jpg", "Progettazione del registro"],
     ],
   },
+  {
+    id: "dataware",
+    group: "uni",
+    kind: "Tesi di laurea",
+    year: "Università",
+    title: "Dataware",
+    foot: "Università, da solo",
+    hook: "La mia tesi. Un sistema che legge le privacy policy e spiega, criterio per criterio, quanto rischi accettandole.",
+    cover: "risk",
+    tint: "#2448b8",
+    rare: true,
+    tags: ["Machine Learning", "RAG", "NLP", "GDPR", "Python"],
+    story: [
+      "Privacy policy e termini di servizio sono i documenti più firmati e meno compresi del digitale. I dieci criteri della tesi uniscono i principi del GDPR alla logica dei contratti, con punteggi da 1 a 5 e cinque classi di rischio.",
+      "Oltre al modello supervisionato ho provato LDA e K-Means, che raggruppano le piattaforme per settore commerciale e non per rischio. Legal-BERT, addestrato su testi giuridici, non è andato oltre il modello più semplice.",
+      "Nella validazione lo scarto medio dalla mia valutazione è di 1.7 punti. Ogni risultato si può aprire criterio per criterio, perché le regole del sistema sono pubbliche.",
+      "I limiti sono dichiarati. Il dataset è piccolo, l'annotazione è in parte soggettiva e il sistema valuta solo ciò che le piattaforme scrivono nei documenti.",
+    ],
+    role: "Progetto individuale, dalla ricerca al dataset, dai modelli di ML al prototipo RAG, fino al design dell'app e alla tesi.",
+    gallery: [
+      ["assets/dataware-landing.jpg", "«Ogni Accetto ha un prezzo»"],
+      ["assets/dataware-app1.jpg", "L'app: la community", true],
+      ["assets/dataware-app2.jpg", "L'app: la scheda di una piattaforma", true],
+      ["assets/dataware-analisi.jpg", "Analisi di una nuova policy"],
+      ["assets/dataware-dataset.jpg", "Estratto del dataset"],
+      ["assets/dataware-modelli.jpg", "Confronto tra i modelli"],
+      ["assets/dataware-confusion.jpg", "Matrice di confusione del modello finale"],
+    ],
+  },
+  {
+    id: "playence",
+    group: "uni",
+    kind: "Hackathon aziendale",
+    year: "1° posto",
+    foot: "In squadra, in quattro",
+    title: "Playence",
+    hook: "Una piattaforma per allenarsi con un campione, con l'AI che dopo la sessione analizza i dati. Ha vinto l'hackathon.",
+    cover: "phones",
+    tint: "#4a6ad8",
+    rare: true,
+    badge: "1° posto",
+    tags: ["Angular", "ASP.NET Core", "SQL Server", "n8n", "Wearable"],
+    story: [
+      "Il progetto ha vinto un hackathon aziendale. È una piattaforma che mette in contatto sportivi amatori e campioni per sessioni di allenamento esclusive.",
+      "Dopo l'evento, i dati del coach e dei dispositivi indossabili passano da un flusso n8n con l'AI, che restituisce un'analisi della performance. Il frontend è in Angular, il backend in ASP.NET Core con SQL Server.",
+      "Alla giuria abbiamo presentato anche il mercato, l'analisi SWOT e il modello di business, partendo da personas e scenari d'uso per tre profili di utente.",
+    ],
+    role: "Progettazione del flusso AI in n8n, architettura e presentazione, in un team di quattro persone.",
+    gallery: [
+      ["assets/playence-s1.jpg", "Dettaglio di un evento", true],
+      ["assets/playence-s2.jpg", "Analisi della performance", true],
+      ["assets/playence-s3.jpg", "Insight generati dall'AI", true],
+      ["assets/playence-s4.jpg", "Accesso", true],
+      ["assets/playence-arch.jpg", "Architettura e flusso n8n", true],
+      ["assets/playence-db.jpg", "Schema del database"],
+    ],
+  },
+  {
+    id: "gufy",
+    group: "uni",
+    kind: "Design di un'app",
+    year: "Università",
+    title: "Gufy",
+    foot: "Università, in coppia",
+    hook: "Un'app per dormire in treno, con un gufo che ti sveglia poco prima della tua fermata.",
+    cover: "gufy",
+    tint: "#5671d0",
+    tags: ["UX research", "Personas", "Storyboard", "Figma"],
+    story: [
+      "Un gufo veglia sul viaggiatore e lo sveglia al momento giusto, anche tramite un auricolare dedicato. Il progetto, fatto in coppia, segue tutta la progettazione centrata sull'utente, dal questionario al prototipo interattivo su Figma.",
+      "Dalle risposte al questionario sono nati personas, scenari e requisiti. Su quella base abbiamo costruito il modello concettuale, gli user flow e lo storyboard.",
+      "L'interfaccia chiede pochissima attenzione, perché chi la usa è spesso stanco.",
+    ],
+    role: "Ricerca utente, progettazione dell'interazione e prototipazione.",
+    gallery: [
+      ["assets/gufy-owl.jpg", "La mascotte"],
+      ["assets/gufy-app1.jpg", "Benvenuto", true],
+      ["assets/gufy-app2.jpg", "Inserimento del viaggio", true],
+      ["assets/gufy-app3.jpg", "Anticipo della sveglia", true],
+      ["assets/gufy-app4.jpg", "Pronto: ora puoi riposare", true],
+      ["assets/gufy-story1.jpg", "Storyboard: si parte"],
+      ["assets/gufy-story2.jpg", "Storyboard: ti sveglio io"],
+      ["assets/gufy-pod.jpg", "Il GufyPod", true],
+    ],
+  },
+  {
+    id: "db",
+    group: "uni",
+    kind: "Database e analisi",
+    year: "Università",
+    title: "Streaming musicale",
+    foot: "Università, da solo",
+    hook: "Un piccolo Spotify fatto da zero, dal database alle analisi di cosa si ascolta per età e mese.",
+    cover: "schema",
+    tint: "#3b4a7d",
+    tags: ["SQL", "Data Warehouse", "OLAP", "Clustering"],
+    story: [
+      "Il database di una piattaforma di streaming, progettato da zero passando per modello concettuale, ristrutturazione e modello logico.",
+      "Sopra c'è un data warehouse a fiocco di neve per analizzare gli ascolti con le operazioni OLAP. Due modelli di data mining, una cluster analysis e un albero di decisione, cercano le tendenze per fascia d'età e mese dell'anno.",
+    ],
+    role: "Progetto individuale.",
+    gallery: [
+      ["assets/db-logico.jpg", "Modello logico"],
+      ["assets/db-er.jpg", "Modello concettuale"],
+      ["assets/db-dwh.jpg", "Data warehouse"],
+    ],
+  },
 ];
 
 // ---------- A capo ----------
@@ -222,7 +222,8 @@ function glueLastWord(root = document) {
   });
 }
 
-// ---------- Animazioni in entrata ----------
+// ---------- Comparsa ----------
+// ogni blocco compare una volta sola, con un piccolo ritardo tra fratelli
 const io = new IntersectionObserver((entries) => {
   entries.forEach((en) => {
     if (!en.isIntersecting) return;
@@ -231,12 +232,12 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 function observeReveal(root = document) {
-  root.querySelectorAll(".reveal:not(.in)").forEach((el, i) => {
-    if (el.closest(".hero")) el.style.transitionDelay = `${i * 90}ms`;
+  root.querySelectorAll(".reveal:not(.in)").forEach((el) => {
+    const sib = [...el.parentElement.children].filter((x) => x.classList.contains("reveal"));
+    el.style.transitionDelay = `${sib.indexOf(el) * 90}ms`;
     io.observe(el);
   });
 }
-
 
 // ---------- Dataware: estratto del dataset della tesi (10 piattaforme su 60) ----------
 const criteriaNames = ["Raccolta", "Condivisione", "Profilazione", "Conservazione", "Trasparenza", "Diritti", "Sicurezza", "Licenza", "Tutele", "Arbitrato"];
@@ -383,13 +384,13 @@ const covers = {
 const pad2 = (n) => String(n).padStart(2, "0");
 const numberOf = (p) => pad2(projects.indexOf(p) + 1);
 
-function cardHTML(p, i, inDeck) {
+function cardHTML(p, i) {
   return `
   <button type="button" class="card${p.rare ? " is-rare" : ""}" data-id="${p.id}" data-index="${i}"
-    style="--tint:${p.tint}" aria-label="${p.title}: apri il progetto">
+    style="--tint:${p.tint};--i:${i}" aria-label="${p.title}: apri il progetto">
     <span class="card-inner">
       <span class="card-top"><span class="card-no">${numberOf(p)}</span><span class="card-kind">${p.kind}</span></span>
-      <span class="card-media">${covers[p.cover]()}${p.badge ? `<span class="seal">★ ${p.badge}</span>` : ""}</span>
+      <span class="card-media">${covers[p.cover]()}${p.badge ? `<span class="seal">${p.badge}</span>` : ""}</span>
       <span class="card-body">
         <span class="card-title">${p.title}</span>
         <span class="card-hook">${p.hook}</span>
@@ -406,139 +407,126 @@ const coverFit = new ResizeObserver((entries) => {
 });
 const fitCovers = (root) => root.querySelectorAll(".card-media").forEach((m) => coverFit.observe(m));
 
-// Inclinazione e riflesso che seguono il puntatore
+// Inclinazione e luce che seguono il puntatore
 const canTilt = matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches;
 document.addEventListener("pointermove", (e) => {
   const inner = e.target.closest?.(".card-inner");
   if (!inner || !canTilt) return;
   const r = inner.getBoundingClientRect();
   const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-  inner.style.setProperty("--ry", `${(px - 0.5) * 8}deg`);
-  inner.style.setProperty("--rx", `${(0.5 - py) * 6}deg`);
+  inner.style.setProperty("--mx", `${px * 100}%`);
+  inner.style.setProperty("--my", `${py * 100}%`);
+  inner.style.setProperty("--ry", `${(px - 0.5) * 12}deg`);
+  inner.style.setProperty("--rx", `${(0.5 - py) * 9}deg`);
 });
 document.addEventListener("pointerout", (e) => {
   const inner = e.target.closest?.(".card-inner");
-  if (inner && !inner.contains(e.relatedTarget)) {
-    inner.style.removeProperty("--rx");
-    inner.style.removeProperty("--ry");
-  }
+  if (inner && !inner.contains(e.relatedTarget)) { inner.style.removeProperty("--rx"); inner.style.removeProperty("--ry"); }
 });
 
-// ---------- Apertura: due lavori in azienda, affiancati ----------
-// sono le stesse figurine della collezione: un clic apre il progetto
-const heroCards = document.getElementById("hero-cards");
-heroCards.innerHTML = ["agente", "campo"].map((id, i) => cardHTML(projects.find((p) => p.id === id), i, true)).join("");
-fitCovers(heroCards);
-
-// ---------- La mia storia: le figurine dentro ogni tappa, oppure tutte nel mazzo ----------
-const chapters = document.getElementById("chapters");
-const deck = document.getElementById("deck");
-const stage = document.getElementById("deck-stage");
-const deckCount = document.getElementById("deck-count");
-const viewsEl = document.getElementById("views");
-let view = "racconto";
-let active = 0;
-
-function render() {
-  chapters.querySelectorAll(".chapter-cards").forEach((box) => {
-    box.innerHTML = box.dataset.ids.split(",").map((id, i) => cardHTML(projects.find((p) => p.id === id), i, false)).join("");
-    fitCovers(box);
-    glueLastWord(box);
-  });
-  stage.innerHTML = projects.map((p, i) => cardHTML(p, i, true)).join("");
-  fitCovers(stage);
-  layoutDeck();
-}
-
-function setPressed(group, attr, value) {
-  group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset[attr] === value));
-}
-function setView(v) {
-  view = v;
-  setPressed(viewsEl, "view", v);
-  chapters.hidden = v !== "racconto";
-  deck.hidden = v !== "mazzo";
-  if (v === "mazzo") requestAnimationFrame(layoutDeck);
-  try { localStorage.setItem("portfolio-view", v); } catch {}
-}
-viewsEl.addEventListener("click", (e) => {
-  const b = e.target.closest("button");
-  if (b) setView(b.dataset.view);
-});
-
-// Il mazzo: la carta attiva sta davanti, le altre si aprono a ventaglio ai lati
-function layoutDeck() {
-  const cards = [...stage.children];
-  if (!cards.length || deck.hidden) return;
-  const w = cards[0].offsetWidth;
+// ---------- Apertura: il mazzo ----------
+// la carta davanti, due dietro un poco ruotate; quella appena passata vola via a sinistra
+const stack = document.getElementById("stack");
+const stackCount = document.getElementById("stack-count");
+let front = 0;
+stack.innerHTML = projects.map((p, i) => cardHTML(p, i)).join("");
+fitCovers(stack);
+function layoutStack() {
+  const cards = [...stack.children], n = cards.length;
   cards.forEach((c, i) => {
-    const o = i - active, a = Math.abs(o), dir = Math.sign(o);
-    const x = dir * (Math.min(a, 1) * w * 0.62 + Math.max(a - 1, 0) * w * 0.3);
-    const y = a * 14 + a * a * 4;
-    const rot = o * 5;
-    const s = 1 - Math.min(a, 4) * 0.06;
-    c.style.transform = `translateX(-50%) translateX(${x}px) translateY(${y}px) rotate(${rot}deg) scale(${s})`;
-    c.style.zIndex = 100 - a;
-    c.style.opacity = a > 3 ? 0 : 1;
-    c.style.pointerEvents = a > 3 ? "none" : "";
-    c.classList.toggle("is-active", o === 0);
+    const o = (i - front + n) % n;
+    let t, op = 1;
+    if (o === 0) t = "translate(0, 0) rotate(-2deg)";
+    else if (o === 1) t = "translate(26px, -14px) rotate(4deg) scale(.96)";
+    else if (o === 2) t = "translate(48px, -26px) rotate(9deg) scale(.92)";
+    else if (o === n - 1) { t = "translate(-130%, 40px) rotate(-22deg)"; op = 0; }
+    else { t = "translate(48px, -26px) rotate(9deg) scale(.9)"; op = 0; }
+    c.style.transform = t;
+    c.style.opacity = op;
+    c.style.zIndex = n - o;
+    c.style.pointerEvents = o === 0 ? "" : "none";
+    c.classList.toggle("is-top", o === 0);
     c.tabIndex = o === 0 ? 0 : -1;
   });
-  deckCount.textContent = `${active + 1} / ${cards.length}`;
+  stackCount.textContent = `${pad2(front + 1)} / ${pad2(n)}`;
 }
-function go(to) {
-  const n = stage.children.length;
-  active = Math.max(0, Math.min(n - 1, to));
-  layoutDeck();
-}
-document.getElementById("deck-prev").addEventListener("click", () => go(active - 1));
-document.getElementById("deck-next").addEventListener("click", () => go(active + 1));
-stage.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft") { e.preventDefault(); go(active - 1); }
-  if (e.key === "ArrowRight") { e.preventDefault(); go(active + 1); }
+function goTo(i) { const n = stack.children.length; front = (i + n) % n; layoutStack(); }
+document.getElementById("stack-prev").addEventListener("click", () => goTo(front - 1));
+document.getElementById("stack-next").addEventListener("click", () => goTo(front + 1));
+stack.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") { e.preventDefault(); goTo(front - 1); }
+  if (e.key === "ArrowRight") { e.preventDefault(); goTo(front + 1); }
+  if (e.key === "Enter") { e.preventDefault(); openProject(projects[front].id); }
 });
-window.addEventListener("resize", layoutDeck);
-
-// Trascinamento col mouse (scorre più carte), swipe col dito (una carta per gesto), rotellina orizzontale
+// trascina la carta: oltre una certa distanza passa alla successiva o alla precedente
 let drag = null, dragged = false;
-stage.addEventListener("pointerdown", (e) => {
-  drag = { x: e.clientX, start: active, w: stage.children[0]?.offsetWidth || 280, touch: e.pointerType !== "mouse" };
-  dragged = false;
-});
+stack.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, card: stack.children[front] }; dragged = false; });
 window.addEventListener("pointermove", (e) => {
   if (!drag) return;
   const dx = e.clientX - drag.x;
   if (Math.abs(dx) > 6) dragged = true;
-  if (drag.touch) return;
-  const to = drag.start - Math.round(dx / (drag.w * 0.45));
-  if (to !== active) go(to);
+  if (dragged) drag.card.style.transform = `translate(${dx}px, 0) rotate(${-2 + dx / 18}deg)`;
 });
 window.addEventListener("pointerup", (e) => {
-  if (drag?.touch) {
-    const dx = e.clientX - drag.x;
-    if (Math.abs(dx) > 40) go(drag.start - Math.sign(dx));
-  }
+  if (!drag) return;
+  const dx = e.clientX - drag.x;
   drag = null;
+  if (dx < -70) goTo(front + 1); else if (dx > 70) goTo(front - 1); else layoutStack();
 });
-window.addEventListener("pointercancel", () => { drag = null; });
+window.addEventListener("pointercancel", () => { drag = null; layoutStack(); });
+layoutStack();
 
-// L'avviso del mazzo usa le parole giuste per mouse o schermo touch
-if (matchMedia("(hover: none) and (pointer: coarse)").matches) {
-  document.querySelector(".deck-hint").textContent = "Scorri le carte con il dito o usa le frecce, poi tocca quella in primo piano per aprirla.";
+// ---------- La collezione: tutte le figurine, con i filtri ----------
+const album = document.getElementById("album");
+const filtersEl = document.getElementById("filters");
+let filter = "all";
+filtersEl.querySelectorAll("button").forEach((b) => {
+  const f = b.dataset.filter;
+  b.querySelector("sup").textContent = f === "all" ? projects.length : projects.filter((p) => p.group === f).length;
+});
+function renderAlbum() {
+  const list = filter === "all" ? projects : projects.filter((p) => p.group === filter);
+  album.innerHTML = list.map((p, i) => cardHTML(p, i)).join("");
+  fitCovers(album);
+  glueLastWord(album);
 }
-let wheelAcc = 0;
-stage.addEventListener("wheel", (e) => {
-  const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
-  if (!d) return;
-  e.preventDefault();
-  wheelAcc += d;
-  if (Math.abs(wheelAcc) > 60) { go(active + Math.sign(wheelAcc)); wheelAcc = 0; }
-}, { passive: false });
+filtersEl.addEventListener("click", (e) => {
+  const b = e.target.closest("button");
+  if (!b || b.dataset.filter === filter) return;
+  filter = b.dataset.filter;
+  filtersEl.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+  renderAlbum();
+});
+renderAlbum();
 
-let savedView = "racconto";
-try { savedView = localStorage.getItem("portfolio-view") || "racconto"; } catch {}
-render();
-setView(savedView === "mazzo" ? "mazzo" : "racconto");
+// ---------- La mia storia: la linea si riempie mentre scorri ----------
+const timeline = document.getElementById("timeline");
+const tlItems = [...timeline.children];
+function fillTimeline() {
+  const r = timeline.getBoundingClientRect(), mid = innerHeight * 0.6;
+  const k = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+  timeline.style.setProperty("--fill", k.toFixed(3));
+  tlItems.forEach((li) => li.classList.toggle("is-lit", li.getBoundingClientRect().top < mid));
+}
+addEventListener("scroll", fillTimeline, { passive: true });
+addEventListener("resize", fillTimeline);
+fillTimeline();
+
+// ---------- Metodo: la linea attraversa i passi quando entri ----------
+const steps = document.getElementById("steps");
+[...steps.children].forEach((li, i) => li.style.setProperty("--i", i));
+new IntersectionObserver((entries, obs) => {
+  if (entries[0].isIntersecting) { steps.classList.add("is-run"); obs.disconnect(); }
+}, { threshold: 0.4 }).observe(steps);
+
+// ---------- Contatti: copia l'indirizzo ----------
+const copyBtn = document.getElementById("copy-mail");
+copyBtn.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(copyBtn.dataset.mail); copyBtn.textContent = "Copiato"; }
+  catch { copyBtn.textContent = "Seleziona e copia"; }
+  copyBtn.classList.add("is-done");
+  setTimeout(() => { copyBtn.textContent = "Copia"; copyBtn.classList.remove("is-done"); }, 2200);
+});
 
 // ---------- Modale di dettaglio ----------
 const modal = document.getElementById("modal");
@@ -595,11 +583,10 @@ function setupGallery() {
 document.addEventListener("click", (e) => {
   const card = e.target.closest(".card");
   if (card) {
-    // nel mazzo, il primo clic porta la carta davanti; il secondo la apre
-    if (card.parentElement === stage) {
+    if (card.parentElement === stack) {
       if (dragged) { dragged = false; return; }
       const i = +card.dataset.index;
-      if (i !== active) { go(i); return; }
+      if (i !== front) { goTo(i); return; }
     }
     openProject(card.dataset.id);
     return;
@@ -647,31 +634,15 @@ lightbox.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") showImage(lbIndex - 1);
 });
 
-// ---------- Metodo: linea che collega i passi ----------
-const graph = document.getElementById("graph");
-const graphPath = document.getElementById("graph-path");
-
-function drawGraph() {
-  const g = graph.getBoundingClientRect();
-  const pts = [...graph.querySelectorAll(".step-n")].map((n) => {
-    const r = n.getBoundingClientRect();
-    return [r.left + r.width / 2 - g.left, r.top + r.height / 2 - g.top];
+// ---------- Menu: segna la sezione che stai leggendo ----------
+const navLinks = [...document.querySelectorAll(".nav nav a")];
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach((en) => {
+    if (!en.isIntersecting) return;
+    navLinks.forEach((a) => a.classList.toggle("is-current", a.getAttribute("href") === "#" + en.target.id));
   });
-  // curva morbida che passa per il centro di ogni nodo
-  let d = `M ${pts[0][0]} ${pts[0][1]}`;
-  for (let i = 1; i < pts.length; i++) {
-    const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], mx = (x0 + x1) / 2;
-    d += ` C ${mx} ${y0}, ${mx} ${y1}, ${x1} ${y1}`;
-  }
-  graphPath.setAttribute("d", d);
-  graphPath.style.setProperty("--len", Math.ceil(graphPath.getTotalLength()));
-}
-drawGraph();
-window.addEventListener("resize", drawGraph);
-document.fonts?.ready.then(drawGraph);
-new IntersectionObserver((entries, obs) => {
-  if (entries[0].isIntersecting) { graph.classList.add("drawn"); obs.disconnect(); }
-}, { threshold: 0.3 }).observe(graph);
+}, { rootMargin: "-40% 0px -55% 0px" });
+document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
 
 glueLastWord();
 observeReveal();
