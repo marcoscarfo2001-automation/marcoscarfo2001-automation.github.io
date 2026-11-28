@@ -424,14 +424,6 @@ document.addEventListener("pointerout", (e) => {
   }
 });
 
-// ---------- Apertura: i quattro lavori in azienda, aperti a ventaglio ----------
-// sono le stesse carte della collezione: un clic apre il progetto
-const heroDeck = document.getElementById("hero-deck");
-heroDeck.innerHTML = ["agente", "campo", "proforma", "corsi"]
-  .map((id, i) => cardHTML(projects.find((p) => p.id === id), i, true)).join("");
-heroDeck.querySelectorAll(".card").forEach((c, i) => c.style.setProperty("--i", i));
-fitCovers(heroDeck);
-
 // ---------- Collezione: filtri, album e mazzo ----------
 const album = document.getElementById("album");
 const deck = document.getElementById("deck");

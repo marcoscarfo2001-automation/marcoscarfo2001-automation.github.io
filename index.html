@@ -13,40 +13,80 @@
   <meta property="og:image" content="https://marcoscarfo2001-automation.github.io/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
-  <meta property="og:image:alt" content="Marco Scarfò, software e AI developer, con le figurine dei suoi progetti">
+  <meta property="og:image:alt" content="Marco Scarfò, software e AI developer">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=24">
+  <link rel="preload" href="assets/fonts/sofia-sans-extra-condensed.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/sofia-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=26">
 </head>
 <body>
     <header class="topbar">
     <a href="#top" class="brand">Marco Scarfò</a>
     <nav>
-      <a href="#metodo">Metodo</a>
       <a href="#progetti">Progetti</a>
+      <a href="#metodo">Metodo</a>
       <a href="#dataware">Dataware</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- APERTURA: chi sono, e il mazzo delle figurine che esce dal bordo -->
+    <!-- APERTURA: chi sono, in due righe, con le azioni subito in vista -->
     <section class="hero">
-      <div class="hero-text">
-        <h1 class="reveal">Marco Scarfò</h1>
-        <p class="hero-role reveal">Software e AI developer</p>
-        <p class="lede reveal">
+      <h1 class="reveal">Marco Scarfò</h1>
+      <div class="hero-side reveal">
+        <p class="hero-role">Software e AI developer</p>
+        <p class="lede">
           Laureato in ICT, oggi frequento la magistrale in Intelligenza Artificiale.
           In azienda costruisco automazioni e software che usano l'AI.
         </p>
-        <div class="hero-cta reveal">
+        <div class="hero-cta">
           <a class="btn btn-solid" href="#progetti">Sfoglia la collezione</a>
           <a class="text-link" href="#contatti">Scrivimi</a>
         </div>
       </div>
-      <div class="hero-deck" id="hero-deck" aria-label="Alcuni progetti, aprili con un clic"></div>
+    </section>
+
+    <!-- PROGETTI: la collezione di figurine -->
+    <section id="progetti" class="collection">
+      <div class="collection-head">
+        <div>
+          <h2 class="sec-title">La collezione</h2>
+          <p class="collection-sub">
+            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
+            Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
+          </p>
+        </div>
+        <div class="collection-controls">
+          <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
+            <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
+            <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
+            <button type="button" data-filter="uni" aria-pressed="false">Università e personali <sup></sup></button>
+          </div>
+          <div class="seg" role="group" aria-label="Cambia vista" id="views">
+            <button type="button" data-view="album" aria-pressed="true">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.2"/></svg>
+              Album
+            </button>
+            <button type="button" data-view="mazzo" aria-pressed="false">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="2" width="7" height="11" rx="1.4" transform="rotate(-14 8 8)"/><rect x="4.5" y="2.5" width="7" height="11" rx="1.4" transform="rotate(10 8 8)"/></svg>
+              Mazzo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="album" id="album"></div>
+
+      <div class="deck" id="deck" hidden>
+        <div class="deck-stage" id="deck-stage" tabindex="0" role="region" aria-roledescription="mazzo di carte" aria-label="Progetti, una carta alla volta"></div>
+        <div class="deck-bar">
+          <button type="button" class="deck-btn" id="deck-prev" aria-label="Carta precedente">←</button>
+          <span class="deck-count" id="deck-count" aria-live="polite"></span>
+          <button type="button" class="deck-btn" id="deck-next" aria-label="Carta successiva">→</button>
+        </div>
+        <p class="deck-hint">Trascina le carte o usa le frecce, poi fai clic su quella in primo piano per aprirla.</p>
+      </div>
     </section>
 
     <!-- PROFILO -->
@@ -54,7 +94,7 @@
       <div>
         <p class="about-big">
           La triennale in ICT è un percorso ibrido, in cui l'informatica si studia accanto a sociologia,
-          diritto e comunicazione. Mi ha insegnato a progettare un sistema <mark>partendo dalle esigenze delle persone</mark> che lo&nbsp;useranno.
+          diritto e comunicazione. Mi ha insegnato a progettare un sistema partendo dalle esigenze delle persone che lo&nbsp;useranno.
         </p>
         <p class="about-more">
           Con la magistrale in Intelligenza Artificiale sto rafforzando la parte tecnica, per arrivare a guidare
@@ -75,7 +115,7 @@
       </div>
     </section>
 
-    <!-- METODO: i passi collegati da un tratto di pennarello -->
+    <!-- METODO: i passi collegati da una linea -->
     <section id="metodo" class="method">
       <div class="method-head">
         <h2 class="sec-title">Il metodo</h2>
@@ -84,14 +124,7 @@
 
       <div class="graph" id="graph">
         <svg class="graph-lines" aria-hidden="true">
-          <defs>
-            <!-- il tratto trema un poco, come una linea tirata a mano col pennarello -->
-            <filter id="marker" x="-2%" y="-10%" width="104%" height="120%">
-              <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/>
-              <feDisplacementMap in="SourceGraphic" scale="4"/>
-            </filter>
-          </defs>
-          <path id="graph-path" filter="url(#marker)"/>
+          <path id="graph-path"/>
         </svg>
         <!-- I testi si alternano sopra e sotto: la curva corre libera nella fascia centrale -->
         <ol class="steps">
@@ -138,48 +171,6 @@
             </div>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- PROGETTI: la collezione di figurine -->
-    <section id="progetti" class="collection">
-      <div class="collection-head">
-        <div>
-          <h2 class="sec-title">La collezione</h2>
-          <p class="collection-sub">
-            Ogni progetto ha la sua figurina, dai lavori in azienda a quelli nati all'università.
-            Aprila per vedere immagini, dettagli e il mio ruolo. Nei lavori per aziende, nomi di clienti e sistemi sono omessi.
-          </p>
-        </div>
-        <div class="collection-controls">
-          <div class="seg" role="group" aria-label="Filtra i progetti" id="filters">
-            <button type="button" data-filter="all" aria-pressed="true">Tutti <sup></sup></button>
-            <button type="button" data-filter="lavoro" aria-pressed="false">Lavoro <sup></sup></button>
-            <button type="button" data-filter="uni" aria-pressed="false">Università e personali <sup></sup></button>
-          </div>
-          <div class="seg" role="group" aria-label="Cambia vista" id="views">
-            <button type="button" data-view="album" aria-pressed="true">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1.2"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1.2"/><rect x="9" y="9" width="5.5" height="5.5" rx="1.2"/></svg>
-              Album
-            </button>
-            <button type="button" data-view="mazzo" aria-pressed="false">
-              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.5" y="2" width="7" height="11" rx="1.4" transform="rotate(-14 8 8)"/><rect x="4.5" y="2.5" width="7" height="11" rx="1.4" transform="rotate(10 8 8)"/></svg>
-              Mazzo
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="album" id="album"></div>
-
-      <div class="deck" id="deck" hidden>
-        <div class="deck-stage" id="deck-stage" tabindex="0" role="region" aria-roledescription="mazzo di carte" aria-label="Progetti, una carta alla volta"></div>
-        <div class="deck-bar">
-          <button type="button" class="deck-btn" id="deck-prev" aria-label="Carta precedente">←</button>
-          <span class="deck-count" id="deck-count" aria-live="polite"></span>
-          <button type="button" class="deck-btn" id="deck-next" aria-label="Carta successiva">→</button>
-        </div>
-        <p class="deck-hint">Trascina le carte o usa le frecce, poi fai clic su quella in primo piano per aprirla.</p>
       </div>
     </section>
 
@@ -275,6 +266,6 @@
     <button class="lb-btn lb-next" data-lb="1" aria-label="Immagine successiva">→</button>
   </dialog>
 
-  <script src="app.js?v=17"></script>
+  <script src="app.js?v=18"></script>
 </body>
 </html>
